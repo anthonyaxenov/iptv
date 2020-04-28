@@ -92,5 +92,5 @@ if (empty($_GET['s'])) { ?>
     </body>
     </html>
 <?php } else {
-    header('Location: '.$data[(int)$_GET['s']-1]['pls']);
+    header('Location: '.$data[$_GET['s']]['pls']);
 }
