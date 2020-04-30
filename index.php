@@ -53,9 +53,9 @@ if (empty($_GET['s'])) { ?>
             <thead>
                 <tr>
                     <td style="text-align: center">ID</td>
-                    <td>Название, источник</td>
+                    <td>Информация о плейлисте</td>
                     <td style="text-align: center">Каналов</td>
-                    <td>Плейлист</td>
+                    <td title="Нажмите на ссылку, чтобы скопировать адрес">Ссылка на плейлист</td>
                 </tr>
             </thead>
             <tbody>
@@ -68,13 +68,13 @@ if (empty($_GET['s'])) { ?>
                             <strong><?=$id?></strong>
                         </td>
                         <td>
-                            <strong>
-                                <?php if (empty($element['src'])) { ?>
-                                    <?=$element['name']?>
-                                <?php } else { ?>
-                                    <a href="<?=$element['src']?>" target="_blank" rel="noopener nofollow"><?=$element['name']?></a>
-                                <?php } ?>
-                            </strong>
+                            <strong><?=$element['name']?></strong>
+                            <?php if (!empty($element['src'])) { ?>
+                                <br><a href="<?=$element['src']?>" target="_blank" rel="noopener nofollow">(источник)</a>        
+                            <?php } ?>
+                            <?php if (!empty($element['desc'])) { ?>
+                                <br><?=$element['desc']?>        
+                            <?php } ?>                            
                         </td>
                         <td style="text-align: center"><?=getChannelCount($element['pls'])?></td>
                         <td onclick="prompt('Скопируйте адрес плейлиста', '<?=$my_url?><?=$id?>')"
@@ -88,7 +88,6 @@ if (empty($_GET['s'])) { ?>
                 <?php } ?>
             </tbody>
         </table>
-        <!-- <h2>Как этим пользоваться?</h2> -->
     </body>
     </html>
 <?php } else {
