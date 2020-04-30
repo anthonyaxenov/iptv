@@ -38,8 +38,7 @@ if (empty($_GET['s'])) { ?>
         <h1>Список самообновляемых плейлистов для IPTV</h1>
         <p>
             Дата обновления списка: <strong>
-                <?=date('d-m-Y h:i:s', filemtime('playlists.ini'))?>
-                <br>
+                <?=date('d-m-Y h:i:s', filemtime('playlists.ini'))?>&nbsp;МСК<br>
                 <a href="https://github.com/anthonyaxenov/iptv">github.com/anthonyaxenov/iptv</a>
             </strong>
         <p>
