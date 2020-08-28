@@ -1,10 +1,8 @@
 <?php
 
-if ($_GET['dbg']) {
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
-}
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 /**
  * Возвращает количество каналов в плейлисте
@@ -21,18 +19,38 @@ function getChannelCount($pls_url) {
 
 // Шаблон короткой ссылки на плейлист
 // $my_url = $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'].'?s=';
-$my_url = $_SERVER['SERVER_NAME'].'/'.basename(__DIR__).'?s=';
+$my_url = $_SERVER['SERVER_NAME'].'/iptv?s=';
 
 // Чтение списка плейлистов из ini-файла
 $data = parse_ini_file('playlists.ini', true);
 
-if (empty($_GET['s'])) { ?>
+if (!empty($_GET['s'])) {
+    if (!empty($data[$_GET['s']]['redirect'])) {
+        header('Location: '.$data[$data[$_GET['s']]['redirect']]['pls']);
+    } elseif (!empty($data[$_GET['s']]['pls'])) {
+        header('Location: '.$data[$_GET['s']]['pls']);
+    } 
+} else {
+?>
     <!DOCTYPE html>
     <html lang="ru">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>IPTV Playlists</title>
+        <style>
+            .myurl {
+                font-weight: bold;
+                line-height: 2em;
+                display: block;
+            }
+            .center {
+                text-align: center;
+            }
+            .pointer {
+                cursor:pointer;
+            }
+        </style>
     </head>
     <body>
         <h1>Список самообновляемых плейлистов для IPTV</h1>
@@ -51,9 +69,9 @@ if (empty($_GET['s'])) { ?>
         <table width="100%" border="1" cellpadding="1">
             <thead>
                 <tr>
-                    <td style="text-align: center">ID</td>
+                    <td class="center">ID</td>
                     <td>Информация о плейлисте</td>
-                    <td style="text-align: center">Каналов</td>
+                    <td class="center">Каналов</td>
                     <td title="Нажмите на ссылку, чтобы скопировать адрес">Ссылка на плейлист</td>
                 </tr>
             </thead>
@@ -63,25 +81,28 @@ if (empty($_GET['s'])) { ?>
                         continue;
                     } ?>
                     <tr>
-                        <td style="text-align: center">
+                        <td class="center">
                             <strong><?=$id?></strong>
                         </td>
                         <td>
-                            <strong><?=$element['name']?></strong>
+                            <strong><?=$element['name'] ?: "Плейлист #".$id?></strong>
                             <?php if (!empty($element['src'])) { ?>
-                                <br><a href="<?=$element['src']?>" target="_blank" rel="noopener nofollow">(источник)</a>        
+                                <br><a href="<?=$element['src']?>" target="_blank" rel="noopener nofollow">Источник</a>        
                             <?php } ?>
                             <?php if (!empty($element['desc'])) { ?>
                                 <br><?=$element['desc']?>        
                             <?php } ?>                            
                         </td>
-                        <td style="text-align: center"><?=getChannelCount($element['pls'])?></td>
-                        <td onclick="prompt('Скопируйте адрес плейлиста', '<?=$my_url?><?=$id?>')"
-                            title="Нажмите, чтобы скопировать адрес"
-                            style="cursor:pointer">
-                            <strong>
-                                <pre><?=$my_url?><?=$id?></pre>
-                            </strong>
+                        <td class="center"><?=getChannelCount($element['pls'])?></td>
+                        <td width="250">
+                            <span onclick="prompt('Скопируйте адрес плейлиста', '<?=$my_url?><?=$id?>')"
+                                  title="Нажмите, чтобы скопировать адрес"
+                                  class="pointer myurl">
+                                <?=$my_url?><?=$id?>
+                            </span>
+                            <span>
+                                Прямая ссылка: <a href="<?=$element['pls']?>">M3U</a>
+                            </span>
                         </td>
                     </tr>
                 <?php } ?>
@@ -89,6 +110,5 @@ if (empty($_GET['s'])) { ?>
         </table>
     </body>
     </html>
-<?php } else {
-    header('Location: '.$data[$_GET['s']]['pls']);
+<?php 
 }
