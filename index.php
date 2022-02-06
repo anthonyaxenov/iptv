@@ -65,6 +65,7 @@ if (array_intersect(array_keys($_GET), array_keys($ini))) {
             <h1>Самообновляемые плейлисты IPTV</h1>
         </a>
         <p class="small text-muted">
+            <a href="https://github.com/anthonyaxenov/iptv">GitHub</a> | <a href="https://axenov.dev">axenov.dev</a><br/>
             Обновлено: <?=$updated_at?>&nbsp;МСК<br/>
             Плейлистов в списке:&nbsp;<strong><?=count($ini)?></strong>
         </p>
@@ -73,9 +74,9 @@ if (array_intersect(array_keys($_GET), array_keys($ini))) {
     <main>
         <div class="container">
             <p>
-                На этой странице собраны ссылки на IPTV-плейлисты, которые находятся в открытом доступе.<br/>
-                Они бесплатны для использования. Список проверяется и обновляется мной вручную.<br/>
-                Поддержкой этих плейлистов занимаются сервисы и ресурсы, указанные как источник.<br/>
+                На этой странице собраны ссылки на IPTV-плейлисты, которые находятся в открытом доступе.
+                Они бесплатны для использования. Список проверяется и обновляется мной вручную.
+                Поддержкой этих плейлистов занимаются сервисы и ресурсы, указанные как источник.
                 Вопросы работоспособности плейлистов адресуйте тем, кто несёт за них ответственность.
             </p>
             <p>Чтобы подключить плейлист, нужно в настройках IPTV-плеера указать ссылку из последней колонки.</p>
@@ -89,7 +90,7 @@ if (array_intersect(array_keys($_GET), array_keys($ini))) {
                 </li>
                 <li>
                     <span class="badge small text-dark bg-success">online</span> Плейлист активен. В этом случае
-                    могут даже подгрузиться список и количество каналов. А может и нет.
+                    могут даже подгрузиться список и количество каналов. А может и нет - тогда следует проверить вручную.
                 </li>
                 <li>
                     <span class="badge small text-dark bg-secondary">unknown</span> Состояние неизвестно.
@@ -156,13 +157,13 @@ if (array_intersect(array_keys($_GET), array_keys($ini))) {
                             </div>
                         </td>
                         <td class="col-3">
-                                <span onclick="prompt('Скопируйте адрес плейлиста', '<?=$my_url?><?=$id?>')"
-                                      data-bs-toggle="tooltip"
-                                      data-bs-placement="top"
-                                      title="Нажмите на ссылку, чтобы скопировать её в буфер обмена"
-                                      class="font-monospace">
-                                    <?=$my_url?><?=$id?>
-                                </span>
+                            <span onclick="prompt('Скопируйте адрес плейлиста', '<?=$my_url?><?=$id?>')"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Нажмите на ссылку, чтобы скопировать её в буфер обмена"
+                                    class="font-monospace">
+                                <?=$my_url?><?=$id?>
+                            </span>
                         </td>
                     </tr>
                     <?php
@@ -181,7 +182,7 @@ if (array_intersect(array_keys($_GET), array_keys($ini))) {
         const id = tr.attributes['data-playlist-id'].value
         const xhr = new XMLHttpRequest()
         xhr.responseType = 'json'
-        xhr.timeout = 10000 // ms
+        xhr.timeout = 60000 // ms = 1 min
         let st_el = tr.querySelector('span.status')
         xhr.onreadystatechange = () => {
             if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -192,11 +193,13 @@ if (array_intersect(array_keys($_GET), array_keys($ini))) {
                     if (xhr.response.is_online === true) {
                         st_el.innerHTML = 'online'
                         st_el.classList.add('bg-success')
-                        tr.querySelector('td.info').innerHTML += '<a class="small" ' +
-                            'data-bs-toggle="collapse" data-bs-target="#channels-' + id + '" aria-expanded="false" ' +
-                            'aria-controls="channels-' + id + '">Список каналов</a><div class="collapse" id="channels-' + id +
-                            '"><p class="card card-body bg-dark small" style="max-height:250px;overflow-y:auto;">' +
-                            xhr.response.channels.join('<br />') + '</p></div>'
+                        if (xhr.response.channels.length > 0) {
+                            tr.querySelector('td.info').innerHTML += '<a class="small" ' +
+                                'data-bs-toggle="collapse" data-bs-target="#channels-' + id + '" aria-expanded="false" ' +
+                                'aria-controls="channels-' + id + '">Список каналов</a><div class="collapse" id="channels-' + id +
+                                '"><p class="card card-body bg-dark small" style="max-height:250px;overflow-y:auto;">' +
+                                xhr.response.channels.join('<br />') + '</p></div>'
+                        }
                     } else {
                         st_el.innerHTML = 'offline'
                         st_el.classList.add('bg-danger')
