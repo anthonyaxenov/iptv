@@ -66,7 +66,7 @@ if (array_intersect(array_keys($_GET), array_keys($ini))) {
         </a>
         <p class="small text-muted">
             <a href="https://github.com/anthonyaxenov/iptv">GitHub</a> | <a href="https://axenov.dev">axenov.dev</a><br/>
-            Обновлено: <?=$updated_at?>&nbsp;МСК<br/>
+            Обновлено:&nbsp;<?=$updated_at?>МСК<br/>
             Плейлистов в списке:&nbsp;<strong><?=count($ini)?></strong>
         </p>
     </header>
@@ -89,8 +89,9 @@ if (array_intersect(array_keys($_GET), array_keys($ini))) {
                     <span class="badge small bg-warning text-dark">?</span> Загрузка данных.
                 </li>
                 <li>
-                    <span class="badge small text-dark bg-success">online</span> Плейлист активен. В этом случае
-                    могут даже подгрузиться список и количество каналов. А может и нет - тогда следует проверить вручную.
+                    <span class="badge small text-dark bg-success">online</span> Плейлист активен. В этом случае, возможно,
+                    даже подгрузится список и количество каналов, но корректность этих данных не гарантируется. А если нет, 
+                    то следует проверить плейлист вручную.
                 </li>
                 <li>
                     <span class="badge small text-dark bg-secondary">unknown</span> Состояние неизвестно.
