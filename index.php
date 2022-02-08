@@ -24,13 +24,15 @@ if (!empty($_GET['getinfo'])) {
     curl_close($ch);
     unset($ch);
     $matches = [];
-    preg_match_all("/^#EXTINF:-?\d[\s]?,[\s]?(.*$)/m", $content, $matches);
+    preg_match_all("/^#EXTINF:-?[\d](?:(\s?url-tvg=\".*\")?(\stvg-logo=\".*\")?(\stvg-name=\".*\")?(\sgroup-title=\".*\")?)\s?,\s?(.*)/m",
+    $content, $matches);
     unset($content);
-    $channels = $matches[1];
+    $channels = $matches[5];
     unset($matches);
     $is_online = is_array($headers) && !empty($headers) && strpos($headers[0], ' 200') !== false;
     unset($headers);
     array_walk($channels, function (&$str) { $str = trim($str); });
+    header("Content-Type: text/plain; charset=utf-8");
     die(json_encode([
         'is_online' => $is_online,
         'count' => $is_online ? count($channels) : '-',
@@ -72,7 +74,7 @@ if (array_intersect(array_keys($_GET), array_keys($ini))) {
     </header>
 
     <main>
-        <div class="container">
+        <div class="container mb-5">
             <p>
                 На этой странице собраны ссылки на IPTV-плейлисты, которые находятся в открытом доступе.
                 Они бесплатны для использования. Список плейлистов отбирается мной вручную и проверяется здесь автоматически.
@@ -80,22 +82,39 @@ if (array_intersect(array_keys($_GET), array_keys($ini))) {
                 Вопросы работоспособности плейлистов адресуйте тем, кто несёт за них ответственность.
             </p>
             <p>Чтобы подключить плейлист, нужно в настройках IPTV-плеера указать ссылку из последней колонки.</p>
+            <p>
+                Я не гарантирую корректность информации, которую ты увидишь здесь.
+                Рекомендую проверять желаемые плейлисты вручную, ибо нет никаких гарантий:
+            </p>
+            <ul>
+                <li>
+                    что это вообще плейлисты, а не чьи-то архивы с мокрыми кисками;
+                </li>
+                <li>
+                    что плейлисты по разным ссылкам не дублируют друг друга и отличаются каналами хотя бы на четверть;
+                </li>
+                <li>
+                    что плейлист работоспособен (каналы работают, корректно названы, имеют аудио, etc.);
+                </li>
+                <li>
+                    что подгрузится корректное количество каналов и их список (хотя на это я ещё могу влиять и
+                    стараюсь как-то улучшить).
+                </li>
+            </ul>
         </div>
 
-        <div class="container py-5">
-            <h2>Пояснение статусов проверки плейлистов</h2>
-            <ui>
+        <div class="container mb-5">
+            <h2>Статусы проверки плейлистов</h2>
+            <ul>
                 <li>
                     <span class="badge small bg-warning text-dark">?</span> Загрузка данных.
                 </li>
                 <li>
-                    <span class="badge small text-dark bg-success">online</span> Плейлист активен. В этом случае, возможно,
-                    даже подгрузится список и количество каналов, но корректность этих данных не гарантируется. А если нет, 
-                    то следует проверить плейлист вручную.
+                    <span class="badge small text-dark bg-success">online</span> Плейлист активен. Фактически
+                    означает, что удалённый файл успешно скачивается.
                 </li>
                 <li>
-                    <span class="badge small text-dark bg-secondary">unknown</span> Состояние неизвестно.
-                    Скорее всего, плейлист активен, но получить данные о нём не удалось. Следует проверить вручную.
+                    <span class="badge small text-dark bg-secondary">unknown</span> Состояние неизвестно. Скорее всего, плейлист активен, но получить данные о нём не удалось.
                 </li>
                 <li>
                     <span class="badge small text-dark bg-secondary">timeout</span> Не удалось вовремя проверить плейлист.
@@ -106,10 +125,10 @@ if (array_intersect(array_keys($_GET), array_keys($ini))) {
                 <li>
                     <span class="badge small text-dark bg-danger">error</span> Ошибка при проверке плейлиста.
                 </li>
-            </ui>
+            </ul>
         </div>
 
-        <div class="container py-5">
+        <div class="container my-5">
             <h2>Список плейлистов</h2>
             <table class="table table-dark table-hover">
                 <thead>
@@ -117,7 +136,7 @@ if (array_intersect(array_keys($_GET), array_keys($ini))) {
                     <th>ID</th>
                     <th>Информация о плейлисте</th>
                     <th>Каналов</th>
-                    <th title="Нажмите на ссылку, чтобы скопировать её в буфер обмена">Ссылка</th>
+                    <th title="Нажми на ссылку, чтобы скопировать её в буфер обмена">Ссылка</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -158,10 +177,10 @@ if (array_intersect(array_keys($_GET), array_keys($ini))) {
                             </div>
                         </td>
                         <td class="col-3">
-                            <span onclick="prompt('Скопируйте адрес плейлиста', '<?=$my_url?><?=$id?>')"
+                            <span onclick="prompt('Скопируй адрес плейлиста', '<?=$my_url?><?=$id?>')"
                                     data-bs-toggle="tooltip"
                                     data-bs-placement="top"
-                                    title="Нажмите на ссылку, чтобы скопировать её в буфер обмена"
+                                    title="Нажми на ссылку, чтобы скопировать её в буфер обмена"
                                     class="font-monospace">
                                 <?=$my_url?><?=$id?>
                             </span>
