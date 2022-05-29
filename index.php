@@ -24,8 +24,7 @@ if (!empty($_GET['getinfo'])) {
     curl_close($ch);
     unset($ch);
     $matches = [];
-    preg_match_all("/^#EXTINF:-?[\d](?:(\s?url-tvg=\".*\")?(\stvg-logo=\".*\")?(\stvg-name=\".*\")?(\sgroup-title=\".*\")?)\s?,\s?(.*)/m",
-    $content, $matches);
+    preg_match_all("/^#EXTINF:-?[\d](?:(\s?url-tvg=\".*\")?(\stvg-logo=\".*\")?(\stvg-name=\".*\")?(\stvg-id=\".*\")?(\sgroup-title=\".*\")?)\s?,\s?(.*)/m", $content, $matches);
     unset($content);
     $channels = $matches[5];
     unset($matches);
