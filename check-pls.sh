@@ -42,7 +42,7 @@ awk '
     }
     {
         sub("\r$", "", $0) # crlf -> lf
-        if ($0 ~ /^#EXTINF\:.+,/) {
+        if ($0 ~ /^#EXTINF:.+,/) {
             total_count++
             channel_name = substr($0, index($0, ",") + 1, length($0))
             print "[" total_count "] " channel_name "..."
