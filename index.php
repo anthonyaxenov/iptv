@@ -8,30 +8,47 @@ $updated_at = date('d.m.Y h:i', filemtime('playlists.ini'));
 $my_url = $_SERVER['SERVER_NAME'] . '?';
 $ini = parse_ini_file('playlists.ini', true);
 
-// получение инфы о плейлисте
+// get playlist info (ajax)
 if (!empty($_GET['getinfo'])) {
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $ini[$_GET['getinfo']]['pls']);
+    $pls_cfg = $ini[$_GET['getinfo']];
     unset($ini);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_HEADER, 1);
-    $response = curl_exec($ch);
-    $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
-    $headers = explode("\r\n", substr($response, 0, $header_size));
-    $content = substr($response, $header_size);
-    unset($response);
-    unset($header_size);
-    curl_close($ch);
-    unset($ch);
+    if (empty($pls_cfg)) {
+        die(json_encode([
+            'is_online' => false,
+            'count' => 0,
+            'channels' => [],
+        ]));
+    }
+
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, $pls_cfg['pls']);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($curl, CURLOPT_TIMEOUT, 3);
+    curl_setopt($curl, CURLOPT_HEADER, 1);
+    $response = curl_exec($curl);
+    $headers_size = curl_getinfo($curl, CURLINFO_HEADER_SIZE);
+    curl_close($curl);
+    if ($response === false) {
+        die(json_encode([
+            'is_online' => false,
+            'count' => '-',
+            'channels' => [],
+        ]));
+    }
+
+    $headers = array_unique(explode("\r\n", substr($response, 0, $headers_size)));
+    $pls_content = substr($response, $headers_size);
+    unset($response, $headers_size, $curl);
+
     $matches = [];
-    preg_match_all("/^#EXTINF:-?[\d](?:(\s?url-tvg=\".*\")?(\stvg-logo=\".*\")?(\stvg-name=\".*\")?(\stvg-id=\".*\")?(\sgroup-title=\".*\")?)\s?,\s?(.*)/m", $content, $matches);
-    unset($content);
-    $channels = $matches[5];
-    unset($matches);
-    $is_online = is_array($headers) && !empty($headers) && strpos($headers[0], ' 200') !== false;
+    // preg_match_all("/^#EXTINF:-?[\d](?:(\s?url-tvg=\".*\")?(\stvg-logo=\".*\")?(\stvg-name=\".*\")?(\stvg-id=\".*\")?(\sgroup-title=\".*\")?)\s?,\s?(.*)/m", $content, $matches);
+    preg_match_all("/^#EXTINF:-?\d.*,\s*(.*)/m", $pls_content, $matches);
+    $channels = $matches[1];
+    unset($pls_content, $matches);
+    $is_online = !empty($headers) && strpos($headers[0], ' 200') !== false;
     unset($headers);
-    array_walk($channels, function (&$str) { $str = trim($str); });
-    header("Content-Type: text/plain; charset=utf-8");
+    $channels = array_map('trim', $channels);
+    header("Content-Type: application/json; charset=utf-8");
     die(json_encode([
         'is_online' => $is_online,
         'count' => $is_online ? count($channels) : '-',
@@ -39,6 +56,7 @@ if (!empty($_GET['getinfo'])) {
     ]));
 }
 
+// redirect to playlist
 if (array_intersect(array_keys($_GET), array_keys($ini))) {
     $id = array_keys($_GET)[0];
     if (!empty($ini[$id]['redirect'])) {
