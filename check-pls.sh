@@ -61,6 +61,7 @@ awk '
     }
     END {
         print "--------------------"
+        print "Playlist: " ARGV[1]
         print "Check stats"
         print "- Success:\t" success_count "/" total_count
         print "- Failed: \t" fail_count "/" total_count
