@@ -284,7 +284,7 @@ if (array_intersect(array_keys($_GET), array_keys($ini))) {
         const id = tr.attributes['data-playlist-id'].value
         const xhr = new XMLHttpRequest()
         xhr.responseType = 'json'
-        xhr.timeout = 5000 // ms = 5 sec
+        xhr.timeout = 60000 // ms = 1 min
         let st_el = tr.querySelector('span.status')
         xhr.onreadystatechange = () => {
             if (xhr.readyState === XMLHttpRequest.DONE) {
