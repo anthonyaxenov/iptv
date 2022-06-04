@@ -76,6 +76,7 @@ if (array_intersect(array_keys($_GET), array_keys($ini))) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPTV Playlists</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>.cursor-pointer {cursor: pointer} </style>
     <script src="js/bootstrap.bundle.min.js"></script>
 </head>
 <body class="bg-dark text-light">
@@ -155,7 +156,7 @@ if (array_intersect(array_keys($_GET), array_keys($ini))) {
                                   data-bs-toggle="tooltip"
                                   data-bs-placement="top"
                                   title="Нажми на ссылку, чтобы скопировать её в буфер обмена"
-                                  class="font-monospace">
+                                  class="font-monospace cursor-pointer">
                                 <?=$my_url?><?=$id?>
                             </span>
                             </td>
@@ -297,7 +298,7 @@ if (array_intersect(array_keys($_GET), array_keys($ini))) {
                         st_el.innerHTML = 'online'
                         st_el.classList.add('bg-success')
                         if (xhr.response.channels.length > 0) {
-                            tr.querySelector('td.info').innerHTML += '<a class="small" ' +
+                            tr.querySelector('td.info').innerHTML += '<a class="small cursor-pointer" ' +
                                 'data-bs-toggle="collapse" data-bs-target="#channels-' + id + '" aria-expanded="false" ' +
                                 'aria-controls="channels-' + id + '">Список каналов</a><div class="collapse" id="channels-' + id +
                                 '"><p class="card card-body bg-dark small" style="max-height:250px;overflow-y:auto;">' +
