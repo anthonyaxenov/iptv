@@ -20,7 +20,7 @@ awk '
         total_count=0
         success_count=0
         fail_count=0
-        print "Playlist: " ARGV[1]
+        print "\033[20m\033[97mPlaylist:\033[0m " ARGV[1]
         if (ARGV[1] ~ /^http(s)?:\/\/.*/) {
             parts_count = split(ARGV[1], parts, "/")
             file_name = parts[parts_count]
@@ -34,10 +34,10 @@ awk '
             ARGV[1] = "/tmp/" file_name
         }
         print ""
-        print "Note 1: operation may take some time."
-        print "Note 2: press CTRL+C to skip current channel or CTRL+Z to kill process."
-        print "Note 3: results may be inaccurate, you should use proper IPTV software to re-check."
-        print "Note 4: error codes listed here - https://everything.curl.dev/usingcurl/returns"
+        print "\033[20m\033[97mNote 1:\033[0m operation may take some time."
+        print "\033[20m\033[97mNote 2:\033[0m press CTRL+C to skip current channel or CTRL+Z to kill process."
+        print "\033[20m\033[97mNote 3:\033[0m results may be inaccurate, you should use proper IPTV software to re-check."
+        print "\033[20m\033[97mNote 4:\033[0m error codes listed here - https://everything.curl.dev/usingcurl/returns"
         print "--------------------"
     }
     {
@@ -48,22 +48,26 @@ awk '
             print "[" total_count "] " channel_name "..."
         }
         if ($0 ~ /^http(s)?:\/\/.*/) {
-            url = sprintf("%c%s%c", 34, $0, 34) # 34 == "
-            code = system("curl -s --max-time 5 --max-filesize 5000 -o /dev/null " url)
+            url = sprintf("%c%s%c", 34, $0, 34) # 34 is "
+            cmd = "curl -fs --max-time 5 -w \"%{http_code}\" --max-filesize 5000 -o /dev/null " url
+            cmd | getline http_code
+            code = close(cmd)
+            if (http_code == "000") {
+                http_code = "-"
+            }
             if (code == 0 || code == 63) {
-                print "\t- OK: " url
+                print "\t- \033[32mOK:\033[0m " url
                 success_count++
             } else {
-                print "\t- ERROR (" code "): " url
+                print "\t- \033[91mERROR\033[0m " code " (" http_code "): " url
                 fail_count++
             }
         }
     }
     END {
         print "--------------------"
-        print "Playlist: " ARGV[1]
-        print "Check stats"
-        print "- Success:\t" success_count "/" total_count
-        print "- Failed: \t" fail_count "/" total_count
+        print "\033[20m\033[97mPlaylist:\033[0m " ARGV[1]
+        print "- Success:\t\033[32m" success_count "\033[0m/" total_count
+        print "- Failed: \t\033[91m" fail_count "\033[0m/" total_count
     }
 ' $1
