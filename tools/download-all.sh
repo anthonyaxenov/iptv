@@ -8,10 +8,10 @@
 #     ./download-all.sh
 #
 # All playlists from playlists.ini will be
-# downloaded in ./files directory
+# downloaded in ./downloaded directory
 #
 #################################################
 
-mkdir files && \
-    cd files && \
+mkdir -p downloaded && \
+    cd downloaded && \
     grep -P "pls='(.*)'" ../playlists.ini | sed "s/^pls=//g" | sed "s/'//g" | tr -d '\r' | xargs wget

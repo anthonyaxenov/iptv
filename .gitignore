@@ -1,3 +1,7 @@
 /.idea
-/files
-a.m3u8
+/.vscode
+/downloaded
+*.m3u
+*.m3u.*
+*.m3u8
+*.m3u8.*

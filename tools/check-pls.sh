@@ -8,10 +8,11 @@
 #     ./check-pls.sh local/pls.m3u
 #     ./check-pls.sh https://example.com/pls.m3u
 #
-# Both *.m3u and *.m3u8 are supported.
+# 1st argument is playlist file name or URL.
+# If it is an URL it will be saved in /tmp and
+# checked as local file.
 #
-# If argument is link to playlist it will be
-# saved in /tmp and then check as local file.
+# Both *.m3u and *.m3u8 are supported.
 #
 #################################################
 
