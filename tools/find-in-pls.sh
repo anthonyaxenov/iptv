@@ -5,8 +5,8 @@
 # IPTV channel finder (one playlist)
 #
 # Usage:
-#     ./find-in-pls.sh disney local/pls.m3u
-#     ./find-in-pls.sh disney https://example.com/pls.m3u
+#     ./find-in-pls.sh "disney" local/pls.m3u
+#     ./find-in-pls.sh "disney" https://example.com/pls.m3u
 #
 # 1st argument is channel name pattern.
 #
@@ -15,6 +15,10 @@
 # checked as local file.
 #
 # Both *.m3u and *.m3u8 are supported.
+#
+# Anthony Axenov (c) 2022
+# The MIT License:
+# https://github.com/anthonyaxenov/iptv/blob/master/LICENSE
 #
 #################################################
 
@@ -53,14 +57,12 @@ awk '
         sub("\r$", "", $0) # crlf -> lf
         if (tolower($0) ~ tolower(regex_ch)) {
             found_count++
-            #print "\n\033[32m" FNR " FOUND:\033[0m\t" $0
-            print "\n" $0
+            print "\n\033[32m" FNR " FOUND:\033[0m\t" $0
             found_last = FNR
         }
         if (found_last > 0) {
             if (tolower($0) ~ tolower(regex_url)) {
-                #print "\t\t" $0
-                print $0 "\n"
+                print "\t\t" $0
                 found_last = 0
             }
         }

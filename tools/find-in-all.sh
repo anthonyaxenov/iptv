@@ -6,9 +6,13 @@
 #
 # Usage:
 #     ./download-all.sh
-#     ./find-in-all.sh disney
+#     ./find-in-all.sh "(disney|atv)"
 #
 # 1st argument is channel name pattern.
+#
+# Anthony Axenov (c) 2022
+# The MIT License:
+# https://github.com/anthonyaxenov/iptv/blob/master/LICENSE
 #
 #################################################
 

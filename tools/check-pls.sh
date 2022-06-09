@@ -14,6 +14,10 @@
 #
 # Both *.m3u and *.m3u8 are supported.
 #
+# Anthony Axenov (c) 2022
+# The MIT License:
+# https://github.com/anthonyaxenov/iptv/blob/master/LICENSE
+#
 #################################################
 
 awk '

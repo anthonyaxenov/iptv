@@ -1,5 +1,21 @@
 # Список самообновляемых плейлистов для IPTV
 
+- [Список самообновляемых плейлистов для IPTV](#список-самообновляемых-плейлистов-для-iptv)
+  - [Как использовать этот список?](#как-использовать-этот-список)
+  - [Как добавить плейлист в этот список?](#как-добавить-плейлист-в-этот-список)
+  - [API](#api)
+  - [Формат `playlists.ini`](#формат-playlistsini)
+  - [Дополнительные инструменты](#дополнительные-инструменты)
+    - [tools/download-all.sh](#toolsdownload-allsh)
+    - [tools/check-pls.sh](#toolscheck-plssh)
+    - [tools/find-in-pls.sh](#toolsfind-in-plssh)
+    - [tools/find-in-all.sh](#toolsfind-in-allsh)
+    - [tools/make-pls.sh](#toolsmake-plssh)
+  - [Как создать свой собственный плейлист](#как-создать-свой-собственный-плейлист)
+  - [Лицензия](#лицензия)
+
+---
+
 > **[Перейти на актуальную сраницу](https://iptv.axenov.dev/)**
 
 Здесь собраны ссылки на IPTV-плейлисты, которые находятся в открытом доступе.
@@ -89,41 +105,148 @@ redirect=p1
 
 ### tools/check-pls.sh
 
-Проверяет каждый канал в плейлисте и выводит результат проверки.
+Проверяет каждый канал в плейлисте на доступность и выводит результат проверки.
 
-Поддерживаются *.m3u и *.m3u8, как локальные файлы, так по прямым ссылкам.
+Поддерживаются *.m3u и *.m3u8; как локальные файлы, так по прямым ссылкам.
 
 Коды ошибок доступны [здесь](https://everything.curl.dev/usingcurl/returns).
 
 Пример:
 
 ```
-$ ./tools/check-pls.sh https://smarttvapp.ru/app/iptvfull.m3u                                                                                                  TSTP ✘  4s  ≡  16:47:00 
-Playlist: https://smarttvapp.ru/app/iptvfull.m3u
-Saved in /tmp/iptvfull.m3u
+$ ./tools/check-pls.sh my.m3u8
+Playlist: my.m3u8
 
 Note 1: operation may take some time.
 Note 2: press CTRL+C to skip current channel or CTRL+Z to kill process.
 Note 3: results may be inaccurate, you should use proper IPTV software to re-check.
 Note 4: error codes listed here - https://everything.curl.dev/usingcurl/returns
 --------------------
-[1] - 1.06.2022 - smarttvapp.ru -...
-        - OK: "https://smarttvapp.ru/wp-content/uploads/2017/02/smartTVradar_logo_405x127kkk12.png"
-[2] Первый канал Евразия...
-        - OK: "http://stream.euroasia.lfstrm.tv/perviy_evrasia/1/index.m3u8"
-[3] Первый канал. Всемирная сеть...
-        - OK: "https://sc.id-tv.kz:443/1KanalVsemSet_36_37.m3u8"
-[4] Россия К +2...
-        - OK: "https://sc.id-tv.kz:443/RossiyaK_34_35.m3u8"
-[5] НТВ Мир...
-        - OK: "http://92.46.127.146:8080/ntv-L3-TRANS/index.m3u8"
-[6] НТВ Мир...
-        - ERROR (28): "https://sc.id-tv.kz:443/NTV_34_35.m3u8"
+[1] Канал Disney...
+	- OK: "http://ott-cdn.ucom.am/s60/04.m3u8"
+[2] Канал Disney...
+	- ERROR 28 (-): "http://92.243.113.179:8080/Disney_Channel/index.m3u8?token=nts_tv"
+[3] Disney канал ...
+	- OK: "http://ott-cdn.ucom.am/s60/index.m3u8 "
+[4] Канал Disney...
+	- OK: "http://ott-cdn.ucom.am/s60/04.m3u8"
+[5] Fox_Life_HD...
+	- ERROR 6 (-): "http://live-ng-01.more.tv/hls/Fox_Life_HD/index_1.m3u8"
+[6] FOX_HD...
+	- ERROR 22 (404): "http://live-ng-01.more.tv/hls/FOX_HD/index_1.m3u8"
 ...
-
 --------------------
-Playlist: https://smarttvapp.ru/app/iptvfull.m3u
+Playlist: my.m3u8
 Check stats
 - Success:      995/999
 - Failed:       4/999
 ```
+
+### tools/find-in-pls.sh
+
+Находит каналы по заданному регулярному выражению в указанном плейлисте.
+
+Поддерживаются *.m3u и *.m3u8; как локальные файлы, так по прямым ссылкам.
+
+Пример:
+
+```
+$ ./tools/find-in-pls.sh disney a.m3u8
+--------------------
+Playlist: a.m3u8
+Channel to find: disney
+--------------------
+
+267 FOUND:	#EXTINF:-1 group-title="Disney" tvg-id="disney",Disney (1)
+		http://zabava-htlive.cdn.ngenix.net/hls/CH_DISNEY/bw2000000/variant.m3u8?version=2
+
+270 FOUND:	#EXTINF:-1 group-title="Disney" tvg-id="disney",Disney (2)
+		https://okkotv-live.cdnvideo.ru/channel/Disney.m3u8
+--------------------
+Playlist: a.m3u8
+Channel found: disney
+Found: 2
+```
+
+### tools/find-in-all.sh
+
+Находит каналы по заданному регулярному выражению в плейлистах, скачанных через download-all.sh.
+
+Пример:
+
+```
+$ ./tools/find-in-all.sh (disney|СТС)
+...
+--------------------
+Playlist: ./downloaded/kids.m3u.1
+Channel to find: (disney|СТС)
+--------------------
+
+35 FOUND:	#EXTINF:-1 tvg-name="СТС Kids HD" group-title="Детские", СТС Kids HD
+		https://okkotv-live.cdnvideo.ru/channel/CTC_Kids_HD.m3u8
+
+59 FOUND:	#EXTINF:-1 tvg-name="Disney канал" group-title="Детские", Disney канал
+		http://zabava-htlive.cdn.ngenix.net/hls/CH_DISNEY/bw2000000/variant.m3u8?version=2
+
+83 FOUND:	#EXTINF:-1 tvg-name="Канал Disney (okko tv)" group-title="Детские", Канал Disney (okko tv)
+		https://okkotv-live.cdnvideo.ru/channel/Disney.m3u8
+--------------------
+Playlist: ./downloaded/kids.m3u.1
+Channel found: (disney|СТС)
+Found: 3
+--------------------
+Playlist: ./downloaded/kz-all.m3u
+Channel to find: (disney|СТС)
+--------------------
+Nothing found
+...
+```
+
+### tools/make-pls.sh
+
+Находит каналы по заданному регулярному выражению в плейлистах, скачанных через download-all.sh.
+
+Отличается от `find-in-all.sh` тем, что тот выводит результат в человекочитаемом формате, а `make-pls.sh` -- в готовом m3u формате для сохранения в файл.
+
+Пример:
+
+```
+./tools/make-pls.sh "(fox|disney)"
+#EXTM3U
+# Autogenerated at 09.06.2022
+# https://github.com/anthonyaxenov/iptv
+
+#EXTINF:-1,Канал Disney
+http://ott-cdn.ucom.am/s60/04.m3u8
+
+#EXTINF:-1,Канал Disney
+http://92.243.113.179:8080/Disney_Channel/index.m3u8?token=nts_tv
+
+#EXTINF:-1 ,Fox HD
+http://live02-cdn.tv.ti.ru:80/dtv/id376_NBN_SG--Fox_HD/04/plst.m3u8
+...
+```
+
+## Как создать свой собственный плейлист
+
+1. Скачать все плейлисты, указанные в `playlists.ini`:
+   ```
+   $ ./tools/download-all.sh
+   ```
+2. Вытащить из них нужные каналы и сохранить в отдельный файл:
+   ```
+   $ ./tools/make-pls.sh "(fox|disney)" > my.m3u8
+   ```
+   Так в плейлисте `./my.m3u8` окажутся все каналы из скачанных плейлистов, в названиях которых встрелись `fox` или `disney`.
+3. Проверить доступность каналов в полученном плейлисте:
+   ```
+   $ ./tools/check-pls.sh my.m3u8
+   ```
+   > Результат `ОК` не значит, что канал действительно работает и отдаёт видео/аудио потоки.  
+   > Результат `ERROR` с любыми кодами ошибок значит, что канал гарантированно не работает.
+4. Вручную: удалить нерабочие, мусорные и продублировавшиеся (по ссылкам) каналы.
+5. Вручную: добавить плейлист в IPTV-плеер и перепроверить результат.
+
+## Лицензия
+
+[The MIT License](LICENSE)

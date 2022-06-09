@@ -1,4 +1,9 @@
 <?php
+/**
+ * Anthony Axenov (c) 2022
+ * The MIT License:
+ * https://github.com/anthonyaxenov/iptv/blob/master/LICENSE
+ */
 
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
