@@ -28,14 +28,12 @@
                 </td>
                 <td class="info">
                     <strong>{{ playlist.name }}</strong>
-                    <span class="badge small bg-secondary text-dark status">?</span>
+                    <span class="badge small bg-secondary text-dark status">loading</span>
                     <div class="small">
                         {% if playlist.desc|length > 0 %}
                             <p class="my-1">{{ playlist.desc }}</p>
                         {% endif %}
-                        <a href="{{ base_url(id ~ '/details') }}"
-                           target="_blank"
-                           rel="noopener nofollow">Подробнее...</a>
+                        <a href="{{ base_url(id ~ '/details') }}">Подробнее...</a>
                     </div>
                 </td>
                 <td class="text-center count">
