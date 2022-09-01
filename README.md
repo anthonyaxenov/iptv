@@ -35,7 +35,7 @@ I'm too lazy to translate and support the whole project in ru and en, sorry, guy
 
 ---
 
-## Содержание
+## Документация
 
 - [Как использовать этот список?](#howtouse)
 - [Формат playlists.ini](#iniformat)
@@ -49,7 +49,6 @@ I'm too lazy to translate and support the whole project in ru and en, sorry, guy
 ---
 
 <a id="howtouse"></a>
-
 ## Как использовать этот список?
 
 Чтобы подключить плейлист, нужно в настройках медиаплеера указать ссылку в следующем формате:
@@ -65,14 +64,10 @@ iptv.axenov.dev/?<ID> (устаревший формат)
 Либо провернуть всё то же самое через браузер.
 
 <a id="iniformat"></a>
-
 ## Формат `playlists.ini`
 
 ```ini
-# В квадратных скобках - ID плейлиста в рамках этого
-# конфига (обязателен). Для удобства ввода с пульта,
-# для ID рекомендуется число или короткая строка без
-# пробелов и др. спецсимволов.
+# ID плейлиста в рамках этого конфига (обязательно)
 [1]
 
 # Название плейлиста (необязательно)
@@ -94,15 +89,15 @@ src = 'https://example.com/super-duper-playlist'
 redirect = 1
 ```
 
-В описании плейлиста обязательны:
-
-* любой желаемый ID в квадратных скобках;
-* либо `pls`, либо `redirect` (если указаны оба, то `redirect` приоритетен).
+В описании любого плейлиста обязательны:
+* ID в квадратных скобках  
+  > Для удобства ввода с пульта, рекомендуется задавать числом или короткой строкой без пробелов и др. спецсимволов.
+* параметр `pls` или `redirect`
+  > Если указаны оба, то `redirect` приоритетен.
 
 Плейлистов с редиректами может быть сколько угодно, но они не должны быть цикличными.
 
 <a id="api"></a>
-
 ## API
 
 Можно получать состояние плейлистов из этого сборника при помощи метода:
@@ -139,16 +134,16 @@ GET https://iptv.axenov.dev/<ID>/json
 
 где:
 
-* `id` -- название плейлиста
-* `name` -- краткое описание из источника или от себя
+* `id` -- идентификатор плейлиста
+* `name` -- название плейлиста
 * `url` -- короткая ссылка, которую можно использовать для добавления плейлиста в плеер
-* `desc` -- подробное описание плейлиста
+* `desc` -- краткое описание
 * `pls` -- прямая ссылка на m3u/m3u8 плейлист
 * `src` -- ссылка на источник, откуда взят плейлист
-* `status` -- признак доступности плейлиста (`online`, `timeout`, `offline`, `unknown`)
+* `status` -- статус плейлиста (`"online"|"timeout"|"offline"|"error"`)
 * `encoding` -- данные о кодировке файла плейлиста
-    * `name` -- название кодировки (на данный момент определяются только `UTF-8` или `Windows-1251`)
-    * `alert` -- признак отличия кодировки от `UTF-8`, названия каналов сконвертированы в `UTF-8`
+    * `name` -- название кодировки (`"UTF-8"|"Windows-1251"`)
+    * `alert` -- признак отличия кодировки от `UTF-8`, названия каналов сконвертированы в `UTF-8`, могут быть ошибки в отображении
 * `channels` -- массив названий каналов
 * `count` -- количество каналов >= 0
 
@@ -174,27 +169,72 @@ GET https://iptv.axenov.dev/<ID>/json
 
 где:
 
-* `id` -- название плейлиста
-* `name` -- краткое описание из источника или от себя
+* `id` -- идентификатор плейлиста
+* `name` -- название плейлиста
 * `url` -- короткая ссылка, которую можно использовать для добавления плейлиста в плеер
-* `desc` -- подробное описание плейлиста
+* `desc` -- краткое описание
 * `pls` -- прямая ссылка на m3u/m3u8 плейлист
 * `src` -- ссылка на источник, откуда взят плейлист
-* `status` -- признак доступности плейлиста (`online`, `timeout`, `offline`, `error`)
-* `error` -- данные о кодировке файла плейлиста
+* `status` -- статус плейлиста (`"online"|"timeout"|"offline"|"error"`)
+* `error` -- данные об ошибке при проверке плейлиста
     * `code` -- [код ошибки curl](https://curl.se/libcurl/c/libcurl-errors.html)
     * `message` -- текст ошибки curl
 
 <a id="deploy"></a>
-
 ## Развёртывание проекта
 
-1. Выполнить `cp .env.example .env`, установить необходимые параметры
+1. Выполнить `cp src/.env.example src/.env`, установить необходимые параметры
 2. Выполнить `docker compose up -d --build`
-3. Открыть `https://<APP_URL>:8080`
+3. Открыть `http://<APP_URL>:8080`
+
+Если на сервере, на котором запускаются контейнеры, стоит apache2, то его можно использовать как реверс прокси:
+
+Для этого следует:
+
+```
+$ sudo a2enmod proxy proxy_http proxy_balancer lbmethod_byrequests
+$ sudo nano /etc/apache2/sites-available/iptv.conf
+```
+```apacheconf
+# example.com заменить на свой адрес
+
+<VirtualHost example.com:80>
+    ServerName example.com
+    # обязательно без SSL:
+    ProxyPreserveHost On
+    ProxyPass / http://localhost:8080/
+    ProxyPassReverse / http://localhost:8080/
+    # обязательно для SSL:
+    # RewriteEngine on
+    # RewriteCond %{SERVER_NAME} =example.com
+    # RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+</VirtualHost>
+
+# обязательно для SSL:
+#<IfModule mod_ssl.c>
+#<VirtualHost example.com:443>
+#    ServerName example.com
+#    ProxyPreserveHost On
+#    ProxyPass / http://localhost:8080/
+#    ProxyPassReverse / http://localhost:8080/
+#    сертификаты можно получить через certbot
+#    SSLCertificateFile /etc/letsencrypt/live/example.com/fullchain.pem
+#    SSLCertificateKeyFile /etc/letsencrypt/live/example.com/privkey.pem
+#    Include /etc/letsencrypt/options-ssl-apache.conf
+#</VirtualHost>
+#</IfModule>
+
+# Ctrl+O
+# Enter
+# Ctrl+X
+```
+```shell
+$ sudo a2ensite iptv
+$ # для подгрузки включенных модулей выполнить именно restart, а не reload
+$ sudo systemctl restart apache2
+```
 
 <a id="tools"></a>
-
 ## Дополнительные инструменты (`./tools`)
 
 ### `download-all.sh`
@@ -349,7 +389,6 @@ http://live02-cdn.tv.ti.ru:80/dtv/id376_NBN_SG--Fox_HD/04/plst.m3u8
 5. Вручную: добавить плейлист в IPTV-плеер и перепроверить результат.
 
 <a id="stack"></a>
-
 ## Использованный стек
 
 * [docker compose](https://docs.docker.com/compose/)
@@ -360,7 +399,6 @@ http://live02-cdn.tv.ti.ru:80/dtv/id376_NBN_SG--Fox_HD/04/plst.m3u8
 * bash
 
 <a id="license"></a>
-
 ## Лицензия
 
 [The MIT License](LICENSE)
