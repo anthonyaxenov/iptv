@@ -10,8 +10,11 @@
             "App\\": "app/"
         },
         "files": [
-            "helpers.php"
+            "app/helpers.php"
         ]
+    },
+    "scripts": {
+        "clear-views": "docker exec -ti iptv-php rm -rf cache/views"
     },
     "config": {
         "optimize-autoloader": true,

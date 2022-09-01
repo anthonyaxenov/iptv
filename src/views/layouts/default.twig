@@ -3,37 +3,41 @@
 <head>
     <title>{{ config('app.title') }}</title>
     <meta charset="utf-8">
-    <meta name="description" content="">
+    <meta name="description" content="Самообновляемые бесплатные IPTV-плейлисты для домашнего просмотра по коротким ссылкам, списки каналов, проверка доступности">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link href="{{ base_url('css/bootstrap.min.css') }}" rel="stylesheet">
-    <style>.cursor-pointer {
-            cursor: pointer
-        }</style>
+    <style>.cursor-pointer{cursor:pointer}</style>
     {% block head %}{% endblock %}
 </head>
 <body class="bg-dark text-light">
-<div class="col-lg-8 mx-auto p-3 pt-md-5 pb-0">
-    <header class="pb-3 mb-3">
-        <a href="/" class="text-light text-decoration-none">
-            <h1>{{ config('app.title') }}</h1>
-        </a>
-        <p class="small text-muted">
-            <a class="small" href="{{ base_url('faq') }}">FAQ</a>&nbsp;|&nbsp;<a
-                    class="small" href="https://github.com/anthonyaxenov/iptv">GitHub</a>&nbsp;|&nbsp;<a
-                    class="small" href="https://axenov.dev">axenov.dev</a>
-        </p>
-        {% block header %}{% endblock %}
-    </header>
-    <div class="container">
-        {% block content %}{% endblock %}
+    <div class="col-lg-8 mx-auto p-3 pt-md-5 pb-0">
+        <header class="mb-3">
+            <h1 data-bs-toggle="tooltip" data-bs-placement="top" title="На главную">
+                <a href="{{ base_url() }}" class="text-light text-decoration-none">
+                    {{ config('app.title') }}
+                </a>
+            </h1>
+            <p class="text-muted">
+                <a href="{{ base_url('faq') }}">FAQ</a>&nbsp;|&nbsp;<a
+                    href="https://github.com/anthonyaxenov/iptv">GitHub</a>&nbsp;|&nbsp;<a
+                    href="https://git.axenov.dev/anthony/iptv">Gitea</a>&nbsp;|&nbsp;<a
+                    href="https://axenov.dev">axenov.dev</a>
+            </p>
+            {% block header %}{% endblock %}
+        </header>
+        <div class="container mx-auto">
+            {% block content %}{% endblock %}
+        </div>
     </div>
-</div>
 
-<footer class="py-4 text-center">
-    <a href="https://github.com/anthonyaxenov/iptv">GitHub</a> | <a href="https://axenov.dev">axenov.dev</a>
-    <script src="{{ base_url('js/bootstrap.bundle.min.js') }}"></script>
-    {% block footer %}{% endblock %}
-</footer>
+    <footer class="py-4 text-center">
+        <script src="{{ base_url('js/bootstrap.bundle.min.js') }}"></script>
+        {% block footer %}{% endblock %}
+        <a href="{{ base_url('faq') }}">FAQ</a>&nbsp;|&nbsp;<a
+            href="https://github.com/anthonyaxenov/iptv">GitHub</a>&nbsp;|&nbsp;<a
+            href="https://git.axenov.dev/anthony/iptv">Gitea</a>&nbsp;|&nbsp;<a
+            href="https://axenov.dev">axenov.dev</a>
+    </footer>
 </body>
 </html>
