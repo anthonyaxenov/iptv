@@ -1,0 +1,63 @@
+{% extends "layouts/default.twig" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block header %}
+    <p class="text-muted small">
+        Обновлено:&nbsp;{{ updated_at }}&nbsp;МСК<br/>
+        Плейлистов в списке:&nbsp;<strong>{{ count }}</strong>
+    </p>
+    <hr/>
+{% endblock %}
+
+{% block content %}
+    <table class="table table-dark table-hover small">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Информация о плейлисте</th>
+            <th>Каналов</th>
+            <th title="Нажми на ссылку, чтобы скопировать её в буфер обмена">Ссылка для ТВ</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for id, playlist in playlists %}
+            <tr class="pls" data-playlist-id="{{ id }}">
+                <td class="text-center id">
+                    <strong>{{ id }}</strong>
+                </td>
+                <td class="info">
+                    <strong>{{ playlist.name }}</strong>
+                    <span class="badge small bg-secondary text-dark status">?</span>
+                    <div class="small">
+                        {% if playlist.desc|length > 0 %}
+                            <p class="my-1">{{ playlist.desc }}</p>
+                        {% endif %}
+                        <a href="{{ base_url(id ~ '/details') }}"
+                           target="_blank"
+                           rel="noopener nofollow">Подробнее...</a>
+                    </div>
+                </td>
+                <td class="text-center count">
+                    <div class="spinner-border text-success" role="status">
+                        <span class="visually-hidden">загрузка...</span>
+                    </div>
+                </td>
+                <td class="col-3">
+                    <span onclick="prompt('Скопируй адрес плейлиста', '{{ playlist.url }}')"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Нажми на ссылку, чтобы скопировать её в буфер обмена"
+                          class="font-monospace cursor-pointer">
+                        {{ playlist.url }}
+                    </span>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block footer %}
+    <script src="{{ base_url('js/checker.js') }}"></script>
+{% endblock %}

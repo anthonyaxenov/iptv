@@ -1,7 +1,12 @@
 /.idea
 /.vscode
 /downloaded
+/src/cache/*
+/src/vendor
+*.log
+.env
 *.m3u
 *.m3u.*
 *.m3u8
 *.m3u8.*
+!/**/.gitkeep

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>{{ config('app.title') }}</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link href="{{ base_url('css/bootstrap.min.css') }}" rel="stylesheet">
+    <style>.cursor-pointer {
+            cursor: pointer
+        }</style>
+    {% block head %}{% endblock %}
+</head>
+<body class="bg-dark text-light">
+<div class="col-lg-8 mx-auto p-3 pt-md-5 pb-0">
+    <header class="pb-3 mb-3">
+        <a href="/" class="text-light text-decoration-none">
+            <h1>{{ config('app.title') }}</h1>
+        </a>
+        <p class="small text-muted">
+            <a class="small" href="{{ base_url('faq') }}">FAQ</a>&nbsp;|&nbsp;<a
+                    class="small" href="https://github.com/anthonyaxenov/iptv">GitHub</a>&nbsp;|&nbsp;<a
+                    class="small" href="https://axenov.dev">axenov.dev</a>
+        </p>
+        {% block header %}{% endblock %}
+    </header>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</div>
+
+<footer class="py-4 text-center">
+    <a href="https://github.com/anthonyaxenov/iptv">GitHub</a> | <a href="https://axenov.dev">axenov.dev</a>
+    <script src="{{ base_url('js/bootstrap.bundle.min.js') }}"></script>
+    {% block footer %}{% endblock %}
+</footer>
+</body>
+</html>

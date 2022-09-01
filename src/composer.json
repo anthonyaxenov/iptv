@@ -1,0 +1,20 @@
+{
+    "require": {
+        "illuminate/collections": "^9.26",
+        "mikecao/flight": "^2.0",
+        "symfony/dotenv": "^6.1",
+        "twig/twig": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "helpers.php"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}
