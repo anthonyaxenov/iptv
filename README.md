@@ -49,6 +49,7 @@ I'm too lazy to translate and support the whole project in ru and en, sorry, guy
 ---
 
 <a id="howtouse"></a>
+
 ## Как использовать этот список?
 
 Чтобы подключить плейлист, нужно в настройках медиаплеера указать ссылку в следующем формате:
@@ -64,6 +65,7 @@ iptv.axenov.dev/?<ID> (устаревший формат)
 Либо провернуть всё то же самое через браузер.
 
 <a id="iniformat"></a>
+
 ## Формат `playlists.ini`
 
 ```ini
@@ -98,6 +100,7 @@ redirect = 1
 Плейлистов с редиректами может быть сколько угодно, но они не должны быть цикличными.
 
 <a id="api"></a>
+
 ## API
 
 Можно получать состояние плейлистов из этого сборника при помощи метода:
@@ -181,11 +184,18 @@ GET https://iptv.axenov.dev/<ID>/json
     * `message` -- текст ошибки curl
 
 <a id="deploy"></a>
+
 ## Развёртывание проекта
 
-1. Выполнить `cp src/.env.example src/.env`, установить необходимые параметры
-2. Выполнить `docker compose up -d --build`
-3. Открыть `http://<APP_URL>:8080`
+### Aвтоматически
+
+Выполнить `./iptv init`
+
+### Вручную
+
+1. Выполнить `cp src/.env.example src/.env`, установить необходимые параметры в файле `src/.env`
+2. Выполнить `docker compose up -d --build` (или `./iptv up`)
+3. Открыть `http://<APP_URL>:8080` в браузере (или `./iptv open`)
 
 Если на сервере, на котором запускаются контейнеры, стоит apache2, то его можно использовать как реверс прокси:
 
@@ -235,6 +245,7 @@ $ sudo systemctl restart apache2
 ```
 
 <a id="tools"></a>
+
 ## Дополнительные инструменты (`./tools`)
 
 ### `download-all.sh`
@@ -367,6 +378,7 @@ http://live02-cdn.tv.ti.ru:80/dtv/id376_NBN_SG--Fox_HD/04/plst.m3u8
 ```
 
 <a id="howtomake"></a>
+
 ## Как создать свой собственный плейлист?
 
 1. Скачать все плейлисты, указанные в [`playlists.ini`](playlists.ini):
@@ -389,6 +401,7 @@ http://live02-cdn.tv.ti.ru:80/dtv/id376_NBN_SG--Fox_HD/04/plst.m3u8
 5. Вручную: добавить плейлист в IPTV-плеер и перепроверить результат.
 
 <a id="stack"></a>
+
 ## Использованный стек
 
 * [docker compose](https://docs.docker.com/compose/)
@@ -399,6 +412,7 @@ http://live02-cdn.tv.ti.ru:80/dtv/id376_NBN_SG--Fox_HD/04/plst.m3u8
 * bash
 
 <a id="license"></a>
+
 ## Лицензия
 
 [The MIT License](LICENSE)
