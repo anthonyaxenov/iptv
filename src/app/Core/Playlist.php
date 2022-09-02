@@ -25,10 +25,10 @@ class Playlist extends BasicPlaylist
             "Плейлист с ID=$id обязан иметь параметр pls или redirect"
         );
         $this->url = str_replace(['http://', 'https://'], '', base_url($id));
-        $this->name = $params['name'] ?? "Плейлист #$id";
-        $this->desc = $params['desc'] ?? null;
-        $this->pls = $params['pls'];
-        $this->src = $params['src'] ?? null;
+        $this->name = empty($params['name']) ? "Плейлист #$id" : $params['name'];
+        $this->desc = empty($params['desc']) ? null : $params['desc'];
+        $this->pls = empty($params['pls']) ? null : $params['pls'];
+        $this->src = empty($params['src']) ? null : $params['src'];
     }
 
     public function toArray(): array
