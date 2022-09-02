@@ -257,7 +257,7 @@ $ sudo systemctl restart apache2
 Для этого следует выполнить:
 
 ```
-./iptv composer clear-views
+cd src && composer clear-views
 ```
 
 ### Скачать все плейлисты
