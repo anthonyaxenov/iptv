@@ -3,7 +3,6 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block header %}
-    <a href="{{ base_url() }}" class="btn btn-outline-light mb-3"><< Назад</a>
     <h2>{{ name }}</h2>
     {% if (encoding.alert) %}
         <div class="alert alert-warning small" role="alert">
@@ -23,7 +22,7 @@
                 <tr>
                     <td class="w-25">ID</td>
                     <td>
-                        {{ id }}&nbsp;{% if status == 'online' %}
+                        <code>{{ id }}</code>&nbsp;{% if status == 'online' %}
                         <span class="badge small text-dark bg-success">online</span>
                     {% elseif status == 'offline' %}
                         <span class="badge small text-dark bg-danger">offline</span>
@@ -39,7 +38,7 @@
                     <td><p>{{ desc }}</p></td>
                 </tr>
                 <tr>
-                    <td title="Нажми на ссылку, чтобы скопировать её в буфер обмена"><b>Ccылка для ТВ</b></td>
+                    <td><b>Ccылка для ТВ</b></td>
                     <td><b onclick="prompt('Скопируй адрес плейлиста', '{{ url }}')"
                            data-bs-toggle="tooltip"
                            data-bs-placement="top"

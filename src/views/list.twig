@@ -1,7 +1,5 @@
 {% extends "layouts/default.twig" %}
 
-{% block title %}{{ title }}{% endblock %}
-
 {% block header %}
     <p class="text-muted small">
         Обновлено:&nbsp;{{ updated_at }}&nbsp;МСК<br/>
@@ -11,13 +9,14 @@
 {% endblock %}
 
 {% block content %}
-    <table class="table table-dark table-hover small">
+<div class="table-responsive">
+    <table class="table table-responsive table-dark table-hover small">
         <thead>
         <tr>
             <th>ID</th>
             <th>Информация о плейлисте</th>
             <th>Каналов</th>
-            <th title="Нажми на ссылку, чтобы скопировать её в буфер обмена">Ссылка для ТВ</th>
+            <th class="d-none d-sm-table-cell">Ссылка для ТВ</th>
         </tr>
         </thead>
         <tbody>
@@ -29,11 +28,12 @@
                 <td class="info">
                     <strong>{{ playlist.name }}</strong>
                     <span class="badge small bg-secondary text-dark status">loading</span>
-                    <div class="small">
+                    <div class="small mt-2">
                         {% if playlist.desc|length > 0 %}
-                            <p class="my-1">{{ playlist.desc }}</p>
+                            <p class="my-1 d-none d-lg-block">{{ playlist.desc }}</p>
                         {% endif %}
                         <a href="{{ base_url(id ~ '/details') }}">Подробнее...</a>
+{#                        <a class="btn btn-sm btn-outline-light" href="{{ base_url(id ~ '/details') }}">Подробнее...</a>#}
                     </div>
                 </td>
                 <td class="text-center count">
@@ -41,7 +41,7 @@
                         <span class="visually-hidden">загрузка...</span>
                     </div>
                 </td>
-                <td class="col-3">
+                <td class="col-3 d-none d-sm-table-cell">
                     <span onclick="prompt('Скопируй адрес плейлиста', '{{ playlist.url }}')"
                           data-bs-toggle="tooltip"
                           data-bs-placement="top"
@@ -55,22 +55,23 @@
         </tbody>
     </table>
     {% if pages.count > 0 %}
-        <nav aria-label="pages">
-            <ul class="pagination pagination-sm justify-content-center">
-                {% for page in range(1, pages.count) %}
-                    {% if page == pages.current %}
-                        <li class="page-item active" aria-current="page">
-                            <span class="page-link">{{ page }}</span>
-                        </li>
-                    {% else %}
-                        <li class="page-item">
-                            <a class="page-link" href="{{ base_url('page/' ~ page) }}">{{ page }}</a>
-                        </li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        </nav>
+    <div aria-label="pages">
+        <ul class="pagination justify-content-center">
+            {% for page in range(1, pages.count) %}
+                {% if page == pages.current %}
+                    <li class="page-item active" aria-current="page">
+                        <span class="page-link">{{ page }}</span>
+                    </li>
+                {% else %}
+                    <li class="page-item">
+                        <a class="page-link bg-dark border-secondary text-light" href="{{ base_url('page/' ~ page) }}">{{ page }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
     {% endif %}
+</div>
 {% endblock %}
 
 {% block footer %}
