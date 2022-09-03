@@ -54,6 +54,10 @@ final class Bootstrapper
             fn() => (new HomeController())->index()
         );
         Flight::route(
+            'GET /page/@page:[0-9]+',
+            fn($page) => (new HomeController())->index((int)$page)
+        );
+        Flight::route(
             'GET /faq',
             fn() => (new HomeController())->faq()
         );

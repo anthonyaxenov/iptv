@@ -21,17 +21,26 @@ class HomeController extends Controller
     /**
      * @throws Exception
      */
-    public function index()
+    public function index(int $page = 1)
     {
         if (Flight::request()->query->count() > 0) {
             $id = Flight::request()->query->keys()[0];
-            Flight::redirect(base_url("$id"));
+            Flight::redirect(base_url($id));
             die;
         }
+        $per_page = 10;
+        $list = $this->ini->playlists
+            ->where('redirect_id', null)
+            // ->sortBy('id')
+            ->forPage($page, $per_page);
         view('list', [
             'updated_at' => $this->ini->updatedAt(),
             'count' => $this->ini->playlists->count(),
-            'playlists' => $this->ini->playlists->where('redirect_id', null)->toArray(),
+            'pages' => [
+                'count' => (int)($this->ini->playlists->count() / $per_page),
+                'current' => $page,
+            ],
+            'playlists' => $list->toArray(),
         ]);
     }
 
