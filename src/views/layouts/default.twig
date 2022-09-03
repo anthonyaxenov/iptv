@@ -21,33 +21,50 @@
     {% block head %}{% endblock %}
 </head>
 <body class="bg-dark text-light">
-    <div class="col-lg-8 mx-auto p-3 pt-md-5 pb-0">
-        <header class="mb-3">
-            <h1 data-bs-toggle="tooltip" data-bs-placement="top" title="На главную">
-                <a href="{{ base_url() }}" class="text-light text-decoration-none">
+    <div class="container col-lg-8 mx-auto">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <img src="{{ base_url('/favicon/favicon-32x32.png') }}" class="d-inline-block align-text-top" alt=""/>
+                <a class="navbar-brand" href="{{ base_url() }}" title="На главную">
                     {{ config('app.title') }}
                 </a>
-            </h1>
-            <p class="text-muted">
-                <a href="{{ base_url('faq') }}">FAQ</a>&nbsp;|&nbsp;<a
-                    href="https://github.com/anthonyaxenov/iptv">GitHub</a>&nbsp;|&nbsp;<a
-                    href="https://git.axenov.dev/anthony/iptv">Gitea</a>&nbsp;|&nbsp;<a
-                    href="https://axenov.dev">axenov.dev</a>
-            </p>
-            {% block header %}{% endblock %}
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ base_url() }}">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ base_url('faq') }}">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://git.axenov.dev/anthony/iptv">Gitea</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/anthonyaxenov/iptv">GitHub</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://axenov.dev">axenov.dev</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </header>
-        <div class="container mx-auto">
+
+        <div class="pt-md-5 pb-0">
             {% block content %}{% endblock %}
         </div>
-    </div>
 
-    <footer class="py-4 text-center">
-        <script src="{{ base_url('js/bootstrap.bundle.min.js') }}"></script>
-        {% block footer %}{% endblock %}
-        <a href="{{ base_url('faq') }}">FAQ</a>&nbsp;|&nbsp;<a
-            href="https://github.com/anthonyaxenov/iptv">GitHub</a>&nbsp;|&nbsp;<a
-            href="https://git.axenov.dev/anthony/iptv">Gitea</a>&nbsp;|&nbsp;<a
-            href="https://axenov.dev">axenov.dev</a>
-    </footer>
+        <footer class="py-4 text-center">
+            <script src="{{ base_url('js/bootstrap.bundle.min.js') }}"></script>
+            {% block footer %}{% endblock %}
+            <a href="{{ base_url('faq') }}">FAQ</a>&nbsp;|&nbsp;<a
+                href="https://github.com/anthonyaxenov/iptv">GitHub</a>&nbsp;|&nbsp;<a
+                href="https://git.axenov.dev/anthony/iptv">Gitea</a>&nbsp;|&nbsp;<a
+                href="https://axenov.dev">axenov.dev</a>
+        </footer>
+    </div>
 </body>
 </html>
