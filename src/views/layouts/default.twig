@@ -65,6 +65,8 @@
                 href="https://axenov.dev">axenov.dev</a>
         </footer>
     </div>
-    {% include "custom/custom.twig" %}
+    {% if is_file("custom/custom.twig") %}
+        {% include "custom/custom.twig" %}
+    {% endif %}
 </body>
 </html>

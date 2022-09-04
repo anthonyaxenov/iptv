@@ -13,6 +13,7 @@ class TwigFunctions extends AbstractExtension
     {
         return [
             new TwigFunction('config', [$this, 'config']),
+            new TwigFunction('is_file', [$this, 'is_file']),
             new TwigFunction('base_url', [$this, 'base_url']),
         ];
     }
@@ -25,5 +26,10 @@ class TwigFunctions extends AbstractExtension
     public function base_url(string $path = ''): string
     {
         return base_url($path);
+    }
+
+    public function is_file(string $path): bool
+    {
+        return is_file($path);
     }
 }
