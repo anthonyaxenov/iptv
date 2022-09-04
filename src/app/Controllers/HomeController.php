@@ -19,6 +19,15 @@ class HomeController extends Controller
     }
 
     /**
+     * @return int
+     */
+    protected function getPageSize(): int
+    {
+        $size = config('app.page_size');
+        return empty($size) || $size < 5 || $size > 100 ? 10 : $size;
+    }
+
+    /**
      * @throws Exception
      */
     public function index(int $page = 1)
@@ -28,11 +37,12 @@ class HomeController extends Controller
             Flight::redirect(base_url($id));
             die;
         }
-        $per_page = 10;
-        $list = $this->ini->playlists
-            ->where('redirect_id', null)
-            // ->sortBy('id')
-            ->forPage($page, $per_page);
+        $per_page = $this->getPageSize();
+        $list = $this->ini->playlists->where('redirect_id', null);
+        if (config('app.sort_by')) {
+            $list = $list->sortBy(config('app.sort_by'));
+        }
+        $list = $list->forPage($page, $per_page);
         view('list', [
             'updated_at' => $this->ini->updatedAt(),
             'count' => $this->ini->playlists->count(),

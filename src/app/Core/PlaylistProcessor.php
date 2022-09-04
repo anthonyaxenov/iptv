@@ -49,7 +49,7 @@ final class PlaylistProcessor
         return $code < 400;
     }
 
-    protected function fetch(string $id)
+    protected function fetch(string $id): array
     {
         $curl = curl_init();
         curl_setopt_array($curl, [

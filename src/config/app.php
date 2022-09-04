@@ -26,5 +26,7 @@ return [
             // 'CP866',
             // 'ISO-8859-5',
         ],
+        'page_size' => (int)(env('PAGE_SIZE', 10)),
+        'sort_by' => env('SORT_BY'),
     ],
 ];
