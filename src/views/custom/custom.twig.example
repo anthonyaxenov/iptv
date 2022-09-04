@@ -1,0 +1,6 @@
+{# Файл для включения кастомных блоков #}
+
+{% block head %}{# ваш код здесь #}{% endblock %}
+{% block header %}{# ваш код здесь #}{% endblock %}
+{% block content %}{# ваш код здесь #}{% endblock %}
+{% block footer %}{# ваш код здесь #}{% endblock %}
