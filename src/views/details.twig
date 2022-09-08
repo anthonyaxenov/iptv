@@ -11,6 +11,11 @@
             Однако названия каналов могут отображаться некорректно, причём не только здесь, но и в плеере.
         </div>
     {% endif %}
+    {% if (error) %}
+        <div class="alert alert-danger small" role="alert">
+            Ошибка плейлиста: [{{ error.code }}] {{ error.message }}
+        </div>
+    {% endif %}
 {% endblock %}
 
 {% block content %}
@@ -57,7 +62,7 @@
             </table>
         </div>
         <div class="col-md-4">
-            <h4>Список каналов ({{ count }})</h4>
+            <h4>Список каналов ({{ count ?? 0 }})</h4>
             <div class="overflow-auto" style="max-height: 350px;">
                 <table class="table table-dark table-hover small">
                     <tbody>

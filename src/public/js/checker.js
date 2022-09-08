@@ -10,7 +10,7 @@ document.querySelectorAll('tr.pls').forEach((tr) => {
             console.log('[' + id + '] DONE', xhr.response)
             el_status.classList.remove('bg-secondary')
             el_status.innerText = xhr.response.status
-            el_count.innerText = xhr.response.count
+            el_count.innerText = xhr.response.count ?? 0
             switch (xhr.response.status) {
                 case 'online':
                     el_status.classList.add('bg-success')
@@ -21,6 +21,9 @@ document.querySelectorAll('tr.pls').forEach((tr) => {
                 default:
                     el_status.classList.add('bg-danger')
                     break
+            }
+            if (xhr.response.error) {
+                el_status.title = '[' + xhr.response.error.code + '] ' + xhr.response.error.message
             }
         }
     }
