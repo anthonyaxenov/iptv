@@ -13,6 +13,7 @@ class TwigFunctions extends AbstractExtension
     {
         return [
             new TwigFunction('config', [$this, 'config']),
+            new TwigFunction('commit', [$this, 'commit']),
             new TwigFunction('is_file', [$this, 'is_file']),
             new TwigFunction('base_url', [$this, 'base_url']),
         ];
@@ -21,6 +22,11 @@ class TwigFunctions extends AbstractExtension
     public function config(string $key, mixed $default = null): mixed
     {
         return config($key, $default);
+    }
+
+    public function commit(): string
+    {
+        return file_get_contents(root_path('commit'));
     }
 
     public function base_url(string $path = ''): string

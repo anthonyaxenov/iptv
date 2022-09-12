@@ -32,7 +32,7 @@ services:
       - ./log/nginx:/var/log/nginx:rw
       - ./src:/var/www:ro
     ports:
-      - 8080:80
+      - '8080:80'
     links:
       - php
     depends_on:

@@ -15,15 +15,20 @@ open_browser() {
 }
 
 case "$1" in
-    '' | 'help' ) echo -e "Provide one of operations: \t init, start, stop, up, down, restart, rebuild, open";
+    '' | 'help' ) echo -e "Provide one of operations: \t init, start, stop, up, down, restart, rebuild, open, hooks";
                   echo "Otherwise all args will passed to 'docker exec -ti $CONTAINER ...'" ;;
-    'init'      ) cp src/.env.example src/.env && nano src/.env && ./iptv up && ./iptv composer i && ./iptv open && echo -e "\nYou're welcome!\n\t$APP_URL";;
+    'init'      ) cp src/.env.example src/.env && \
+                  ./iptv hooks && \
+                  ./iptv up && \
+                  ./iptv composer i && \
+                  echo "Project started successfully! $APP_URL" ;;
     'up'        ) $CMD up -d --build && ./iptv open ;; # build and start containers
     'down'      ) $CMD down --remove-orphans ;; # stop and remove containers
-    'start'     ) $CMD start && ./iptv open ;; # start containers
+    'start'     ) $CMD start ;; # start containers
     'stop'      ) $CMD stop ;; # stop containers
     'restart'   ) $CMD stop && $CMD start ;; # restart containers
     'rebuild'   ) $CMD down --remove-orphans && $CMD up -d --build ;; # rebuild containers
-    'open'      ) open_browser $APP_URL ;;
-    *           ) docker exec -ti $CONTAINER $@ # exec anything else in container
+    'open'      ) open_browser $APP_URL && echo -e "\nYou're welcome!\n\t$APP_URL" ;;
+    'hooks'     ) ./hooks/post-commit && cp hooks/* .git/hooks ;;
+    *           ) docker exec -ti $CONTAINER $* ;; # exec anything else in container
 esac

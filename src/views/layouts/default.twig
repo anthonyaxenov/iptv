@@ -62,7 +62,12 @@
             <a href="{{ base_url('faq') }}">FAQ</a>&nbsp;|&nbsp;<a
                 href="https://github.com/anthonyaxenov/iptv">GitHub</a>&nbsp;|&nbsp;<a
                 href="https://git.axenov.dev/anthony/iptv">Gitea</a>&nbsp;|&nbsp;<a
-                href="https://axenov.dev">axenov.dev</a>
+                href="https://axenov.dev">axenov.dev</a><br>
+            <span class="small text-muted">
+                commit&nbsp;<a class="text-muted" target="_blank"
+                   href="https://github.com/anthonyaxenov/iptv/commit/{{ commit() }}"
+                >{{ commit()[:8] }}</a>
+            </span>
         </footer>
     </div>
     {% if is_file("custom/custom.twig") %}

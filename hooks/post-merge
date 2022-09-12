@@ -1,0 +1,7 @@
+#!/bin/bash
+# хук пробрасывает хэш свежего коммита в контейнер
+# для его отображения в подвале страницы и очищает
+# кеш шаблонов twig после слияния веток
+# главным образом необходимо при git pull
+git rev-parse HEAD > src/commit
+docker exec -ti iptv-php rm -rf cache/views
