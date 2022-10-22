@@ -18,13 +18,12 @@
 
 TOOLS_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}"; )" &> /dev/null && pwd 2> /dev/null; )";
 DL_DIR="$TOOLS_DIR/downloaded"
-ROOT_DIR="`dirname "$TOOLS_DIR"`"
-INI_FILE="$ROOT_DIR/playlists.ini"
+INI_FILE="$(dirname "$TOOLS_DIR")/playlists.ini"
 
 rm -rf "$DL_DIR" && \
     mkdir -p "$DL_DIR" && \
     cd "$DL_DIR" && \
-        cat "`dirname "$TOOLS_DIR"`/playlists.ini" \
+    cat "$INI_FILE" \
         | grep -P "pls\s*=\s*'(.*)'" \
         | sed "s#^pls\s*=\s*##g" \
         | sed "s#'##g" \

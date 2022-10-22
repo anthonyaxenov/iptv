@@ -17,9 +17,9 @@
 #################################################
 
 TOOLS_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}"; )" &> /dev/null && pwd 2> /dev/null; )";
-ROOT_DIR="`dirname "$TOOLS_DIR"`"
-[ ! -d "$TOOLS_DIR/downloaded" ] && echo "Error: 'tools/downloaded' directory does not exist. Run tools/download-all.sh" && exit 1
-[ ! "$(ls -A $TOOLS_DIR/downloaded)" ] && echo "Error: 'tools/downloaded' directory is empty. Run tools/download-all.sh" && exit 2
+DL_DIR="$TOOLS_DIR/downloaded"
+[ ! -d "$DL_DIR" ] && echo "Error: 'tools/downloaded' directory does not exist. Run tools/download-all.sh" && exit 1
+[ ! "$(ls -A "$DL_DIR")" ] && echo "Error: 'tools/downloaded' directory is empty. Run tools/download-all.sh" && exit 2
 for file in $TOOLS_DIR/downloaded/*; do
     $TOOLS_DIR/find-in-pls.sh "$1" "$file"
 done

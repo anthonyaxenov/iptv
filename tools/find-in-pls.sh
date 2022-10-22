@@ -22,59 +22,63 @@
 #
 #################################################
 
-awk '
-    BEGIN {
-        IGNORECASE=1
-        channel = ARGV[1]
-        playlist = ARGV[2]
-        found_count = 0
-        found_last = 0
-        regex_ch = tolower(sprintf("^#EXTINF:.+,\s*(.*%s.*)", channel))
-        regex_url = "^https?:\/\/.*$"
+channel="$1"
+playlist="$2"
+playlist_url="$playlist"
+regex_ch="^#extinf:\s*-?[01]\s*.*,(.*${channel,,}.*)"
+regex_url="^https?:\/\/.*$"
 
-        print "--------------------"
-        print "\033[20m\033[97mPlaylist:\033[0m " playlist
-        print "\033[20m\033[97mChannel to find:\033[0m " channel
+is_downloaded=0
+download_dir="/tmp/$(date '+%s%N')"
 
-        if (playlist ~ /^http(s)?:\/\/.*/) {
-            parts_count = split(playlist, parts, "/")
-            file_name = parts[parts_count]
-            code = system("wget " playlist " -qO /tmp/" file_name " > /dev/null")
-            if (code == 0) {
-                print "Saved in /tmp/" file_name
-            } else {
-                print "ERROR: cannot download playlist: " playlist
-                exit 1
-            }
-            playlist = "/tmp/" file_name
-        }
+found_count=0
+found_last=0
+line_count=1
 
-        ARGV[1] = playlist
-        delete ARGV[2]
-        print "--------------------"
-    }
-    {
-        sub("\r$", "", $0) # crlf -> lf
-        if (tolower($0) ~ tolower(regex_ch)) {
-            found_count++
-            print "\n\033[32m" FNR " FOUND:\033[0m\t" $0
-            found_last = FNR
-        }
-        if (found_last > 0) {
-            if (tolower($0) ~ tolower(regex_url)) {
-                print "\t\t" $0
-                found_last = 0
-            }
-        }
-    }
-    END {
-        if (found_count == 0) {
-            print "\033[91mNothing found\033[0m"
-        } else {
-            print "--------------------"
-            print "\033[20m\033[97mPlaylist:\033[0m " playlist
-            print "\033[20m\033[97mChannel found:\033[0m " channel
-            print "\033[20m\033[97mFound:\033[0m\033[32m " found_count "\033[0m"
-        }
-    }
-' $1 $2
+if [[ "$playlist" =~ $regex_url ]]; then
+    mkdir -p "$download_dir"
+    cd "$download_dir"
+    wget "$playlist" -q > /dev/null
+    if [ $? -eq 0 ]; then
+        is_downloaded=1
+        playlist="$download_dir/$(ls -1 "$download_dir")"
+        cd -
+    else
+        echo "ERROR: cannot download playlist: $playlist"
+        exit 1
+    fi
+fi
+
+echo "--------------------"
+echo -e "\033[20m\033[97mChannel:\033[0m $channel"
+echo -e "\033[20m\033[97mPlaylist:\033[0m $playlist_url"
+echo -e "\033[20m\033[97mRegex:\033[0m $regex_ch"
+echo "--------------------"
+
+while read line; do
+    if [[ "${line,,}" =~ $regex_ch ]]; then
+        echo -e "\n\033[32m$line_count FOUND:\033[0m\t$line"
+        ((found_count += 1))
+        found_last=$found_count
+    fi
+    if [ $found_last -gt 0 ]; then
+        if [[ "${line,,}" =~ $regex_url ]]; then
+            echo -e "\t\t$line"
+            found_last=0
+        fi
+    fi
+    ((line_count += 1))
+done < $playlist
+
+if [ $found_count -eq 0 ]; then
+    echo -e "\033[91mNothing found\033[0m"
+else
+    echo "--------------------"
+    echo -e "\033[20m\033[97mPlaylist:\033[0m $playlist_url"
+    echo -e "\033[20m\033[97mChannel:\033[0m $channel"
+    echo -e "\033[20m\033[97mFound:\033[0m\033[32m $found_count\033[0m"
+fi
+
+if [ $is_downloaded -eq 1 ]; then
+    rm -rf "$download_dir"
+fi
