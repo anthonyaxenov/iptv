@@ -24,10 +24,10 @@ class Playlist extends BasicPlaylist
         empty($params['pls']) && throw new \Exception(
             "Плейлист с ID=$id обязан иметь параметр pls или redirect"
         );
-        $this->url = str_replace(['http://', 'https://'], '', base_url($id));
+        $this->url = base_url($id);
         $this->name = empty($params['name']) ? "Плейлист #$id" : $params['name'];
         $this->desc = empty($params['desc']) ? null : $params['desc'];
-        $this->pls = empty($params['pls']) ? null : $params['pls'];
+        $this->pls = $params['pls'];
         $this->src = empty($params['src']) ? null : $params['src'];
     }
 
