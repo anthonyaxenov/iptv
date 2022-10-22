@@ -39,10 +39,9 @@ awk '
             ARGV[1] = "/tmp/" file_name
         }
         print ""
-        print "\033[20m\033[97mNote 1:\033[0m operation may take some time."
-        print "\033[20m\033[97mNote 2:\033[0m press CTRL+C to skip current channel or CTRL+Z to kill process."
-        print "\033[20m\033[97mNote 3:\033[0m results may be inaccurate, you should use proper IPTV software to re-check."
-        print "\033[20m\033[97mNote 4:\033[0m error codes listed here - https://everything.curl.dev/usingcurl/returns"
+        print "\033[20m\033[97mNote 1:\033[0m operation may take some time, press CTRL+C to stop."
+        print "\033[20m\033[97mNote 2:\033[0m results may be inaccurate, you should use proper IPTV software to re-check."
+        print "\033[20m\033[97mNote 3:\033[0m error codes listed here - https://everything.curl.dev/usingcurl/returns"
         print "--------------------"
     }
     {
