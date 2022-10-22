@@ -28,7 +28,8 @@ class PlaylistController extends Controller
             Flight::redirect(base_url($playlist->redirect_id));
             die;
         }
-        Flight::redirect($playlist->pls);
+        header('Location: ' . $playlist->pls);
+        die;
     }
 
     /**
