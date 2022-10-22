@@ -1,6 +1,6 @@
 /.idea
 /.vscode
-/downloaded
+downloaded/
 /src/commit
 /src/cache/*
 /src/vendor
