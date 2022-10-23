@@ -42,7 +42,7 @@ if [[ "$playlist" =~ $regex_url ]]; then
     if [ $? -eq 0 ]; then
         is_downloaded=1
         playlist="$download_dir/$(ls -1 "$download_dir")"
-        cd -
+        cd - > /dev/null
     else
         echo "ERROR: cannot download playlist: $playlist"
         exit 1
@@ -74,8 +74,8 @@ if [ $found_count -eq 0 ]; then
     echo -e "\033[91mNothing found\033[0m"
 else
     echo "--------------------"
-    echo -e "\033[20m\033[97mPlaylist:\033[0m $playlist_url"
     echo -e "\033[20m\033[97mChannel:\033[0m $channel"
+    echo -e "\033[20m\033[97mPlaylist:\033[0m $playlist_url"
     echo -e "\033[20m\033[97mFound:\033[0m\033[32m $found_count\033[0m"
 fi
 

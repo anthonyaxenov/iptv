@@ -49,7 +49,7 @@ awk '
         if ($0 ~ /^#EXTINF:.+,/) {
             total_count++
             channel_name = substr($0, index($0, ",") + 1, length($0))
-            print "[" total_count "] " channel_name "..."
+            print "\n[" total_count "] " channel_name
         }
         if ($0 ~ /^http(s)?:\/\/.*/) {
             url = sprintf("%c%s%c", 34, $0, 34) # 34 is "
@@ -60,10 +60,10 @@ awk '
                 http_code = "-"
             }
             if (code == 0 || code == 63) {
-                print "\t- \033[32mOK:\033[0m " url
+                print "\033[32mOK:\033[0m " url
                 success_count++
             } else {
-                print "\t- \033[91mERROR\033[0m " code " (" http_code "): " url
+                print "\033[91mERROR\033[0m " code " (" http_code "): " url
                 fail_count++
             }
         }
