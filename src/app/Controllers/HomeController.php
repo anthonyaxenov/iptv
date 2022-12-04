@@ -47,7 +47,7 @@ class HomeController extends Controller
             'updated_at' => $this->ini->updatedAt(),
             'count' => $this->ini->playlists->count(),
             'pages' => [
-                'count' => (int)($this->ini->playlists->count() / $per_page),
+                'count' => ceil($this->ini->playlists->count() / $per_page),
                 'current' => $page,
             ],
             'playlists' => $list->toArray(),
