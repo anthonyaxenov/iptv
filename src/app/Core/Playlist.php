@@ -1,27 +1,51 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace App\Core;
 
+use Exception;
+
+/**
+ * Плейлист без редиректа
+ */
 class Playlist extends BasicPlaylist
 {
+    /**
+     * @var string|null Название плейлиста
+     */
     public ?string $name;
 
+    /**
+     * @var string|null Описание плейлиста
+     */
     public ?string $desc;
 
+    /**
+     * @var string Прямой URL до файла плейлиста на третьей стороне
+     */
     public string $pls;
 
+    /**
+     * @var string|null Источник плейлиста
+     */
     public ?string $src;
 
+    /**
+     * @var string Ссылка на плейлист в рамках проекта
+     */
     public string $url;
 
     /**
-     * @throws \Exception
+     * Конструктор
+     *
+     * @param string $id
+     * @param array $params
+     * @throws Exception
      */
     public function __construct(public string $id, array $params)
     {
-        empty($params['pls']) && throw new \Exception(
+        empty($params['pls']) && throw new Exception(
             "Плейлист с ID=$id обязан иметь параметр pls или redirect"
         );
         $this->url = base_url($id);
@@ -31,6 +55,9 @@ class Playlist extends BasicPlaylist
         $this->src = empty($params['src']) ? null : $params['src'];
     }
 
+    /**
+     * @inheritDoc
+     */
     public function toArray(): array
     {
         return [

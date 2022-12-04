@@ -1,17 +1,30 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace App\Core;
 
+use App\Exceptions\PlaylistNotFoundException;
 use Illuminate\Support\Collection;
 
+/**
+ * Обработчик списка плейлистов
+ */
 final class PlaylistProcessor
 {
+    /**
+     * @var Collection Коллекция подгруженных плейлистов
+     */
     public Collection $playlists;
 
+    /**
+     * @var string Дата последнего обновления списка
+     */
     protected string $updated_at;
 
+    /**
+     * Конструктор
+     */
     public function __construct()
     {
         $filepath = config_path('playlists.ini');
@@ -24,31 +37,60 @@ final class PlaylistProcessor
             });
     }
 
+    /**
+     * Проверяет есть ли в списке плейлист по его id
+     *
+     * @param string $id
+     * @return bool
+     */
     public function hasId(string $id): bool
     {
-        return in_array($id, $this->playlists->keys()->toArray());
+        return $this->playlists->keys()->contains($id);
     }
 
+    /**
+     * Возвращает из коллекции указанный плейлист, если он существует
+     *
+     * @param string $id
+     * @return Playlist|RedirectedPlaylist
+     * @throws PlaylistNotFoundException
+     */
     public function playlist(string $id): Playlist|RedirectedPlaylist
     {
-        !$this->hasId($id) && throw new \InvalidArgumentException("Плейлист с ID=$id не найден");
+        !$this->hasId($id) && throw new PlaylistNotFoundException($id);
         return $this->playlists[$id];
     }
 
+    /**
+     * Проверяет доступность плейлиста на третьей стороне
+     *
+     * @param string $id
+     * @return bool
+     * @throws PlaylistNotFoundException
+     */
     public function check(string $id): bool
     {
         $curl = curl_init();
-        curl_setopt($curl, CURLOPT_URL, $this->playlist($id)['pls']);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($curl, CURLOPT_TIMEOUT, 5);
-        curl_setopt($curl, CURLOPT_HEADER, 0);
-        curl_setopt($curl, CURLOPT_NOBODY, 1);
+        curl_setopt_array($curl, [
+            CURLOPT_URL => $this->playlist($id)->pls,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_TIMEOUT => 5,
+            CURLOPT_HEADER => false,
+            CURLOPT_NOBODY => true,
+        ]);
         curl_exec($curl);
         $code = curl_getinfo($curl, CURLINFO_RESPONSE_CODE);
         curl_close($curl);
         return $code < 400;
     }
 
+    /**
+     * Получает содержимое плейлиста с третьей стороны
+     *
+     * @param string $id
+     * @return array
+     * @throws PlaylistNotFoundException
+     */
     protected function fetch(string $id): array
     {
         $curl = curl_init();
@@ -72,6 +114,12 @@ final class PlaylistProcessor
         ];
     }
 
+    /**
+     * Возвращает статус проверки плейлиста по коду ошибки curl
+     *
+     * @param int $curl_err_code
+     * @return string
+     */
     protected function guessStatus(int $curl_err_code): string
     {
         return match ($curl_err_code) {
@@ -82,6 +130,13 @@ final class PlaylistProcessor
         };
     }
 
+    /**
+     * Парсит полученный от третьей стороны плейлист
+     *
+     * @param string $id
+     * @return array Информация о составе плейлиста
+     * @throws PlaylistNotFoundException
+     */
     public function parse(string $id): array
     {
         $fetched = $this->fetch($id);
@@ -110,6 +165,8 @@ final class PlaylistProcessor
     }
 
     /**
+     * Возвращает дату последнего обновления списка плейлистов
+     *
      * @return string
      */
     public function updatedAt(): string

@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace App\Core;
 
@@ -15,13 +15,26 @@ use Twig\Environment;
 use Twig\Extension\DebugExtension;
 use Twig\Loader\FilesystemLoader;
 
+/**
+ * Сборщик приложения
+ */
 final class Bootstrapper
 {
+    /**
+     * Загружает env-переменные
+     *
+     * @return void
+     */
     public static function bootEnv(): void
     {
         (new Dotenv())->loadEnv(root_path() . '/.env');
     }
 
+    /**
+     * Загружает конфигурацию приложения в контейнер
+     *
+     * @return void
+     */
     public static function bootSettings(): void
     {
         $settings = Arr::dot(require_once config_path('app.php'));
@@ -31,6 +44,11 @@ final class Bootstrapper
         Flight::set('config', $settings);
     }
 
+    /**
+     * Загружает шаблонизатор и его расщирения
+     *
+     * @return void
+     */
     public static function bootTwig(): void
     {
         $filesystemLoader = new FilesystemLoader(config('views.path'));
@@ -47,6 +65,11 @@ final class Bootstrapper
         );
     }
 
+    /**
+     * Загружает маршруты
+     *
+     * @return void
+     */
     public static function bootRoutes(): void
     {
         Flight::route(

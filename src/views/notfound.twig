@@ -1,0 +1,18 @@
+{% extends "layouts/default.twig" %}
+
+{% block header %}
+    <h2>Плейлист не найден</h2>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <p>
+                Плейлист {{ id }} не найден
+            </p>
+            <a class="navbar-brand" href="{{ base_url() }}" title="На главную">
+                Перейти к списку
+            </a>
+        </div>
+    </div>
+{% endblock %}

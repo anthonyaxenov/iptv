@@ -1,13 +1,19 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace App\Core;
 
+/**
+ * Плейлист с редиректом
+ */
 class RedirectedPlaylist extends BasicPlaylist
 {
     /**
-     * @throws \Exception
+     * Конструктор
+     *
+     * @param string $id
+     * @param string $redirect_id
      */
     public function __construct(
         public string $id,
@@ -15,6 +21,9 @@ class RedirectedPlaylist extends BasicPlaylist
     ) {
     }
 
+    /**
+     * @inheritDoc
+     */
     public function toArray(): array
     {
         return [
