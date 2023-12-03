@@ -30,11 +30,10 @@ final class PlaylistProcessor
         $filepath = config_path('playlists.ini');
         $this->updated_at = date('d.m.Y h:i', filemtime($filepath));
         $this->playlists = collect(parse_ini_file($filepath, true))
-            ->transform(function ($playlist, $id) {
-                return empty($playlist['redirect'])
-                    ? new Playlist((string)$id, $playlist)
-                    : new RedirectedPlaylist((string)$id, $playlist['redirect']);
-            });
+            ->transform(static fn ($playlist, $id) => empty($playlist['redirect'])
+                ? new Playlist((string)$id, $playlist)
+                : new RedirectedPlaylist((string)$id, $playlist['redirect'])
+            );
     }
 
     /**
@@ -97,7 +96,7 @@ final class PlaylistProcessor
         curl_setopt_array($curl, [
             CURLOPT_URL => $this->playlist($id)->pls,
             CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_TIMEOUT => 5,
+            CURLOPT_TIMEOUT => 30,
             CURLOPT_HEADER => false,
             CURLOPT_FAILONERROR => true,
         ]);
