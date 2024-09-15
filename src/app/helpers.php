@@ -18,17 +18,6 @@ function root_path(string $path = ''): string
 }
 
 /**
- * Returns path to app
- *
- * @param string $path
- * @return string
- */
-function app_path(string $path = ''): string
-{
-    return root_path("app/$path");
-}
-
-/**
  * Return path to application configuration directory
  *
  * @param string $path
@@ -48,17 +37,6 @@ function config_path(string $path = ''): string
 function cache_path(string $path = ''): string
 {
     return root_path("cache/$path");
-}
-
-/**
- * Return path to public part of application
- *
- * @param string $path
- * @return string
- */
-function public_path(string $path = ''): string
-{
-    return root_path("public/$path");
 }
 
 /**
@@ -137,23 +115,14 @@ function app(): Engine
  */
 function bool(mixed $value): bool
 {
-    if (is_bool($value)) {
-        return $value;
-    }
-    if (is_object($value)) {
+    is_string($value) && $value = strtolower(trim($value));
+    if (in_array($value, [true, 1, '1', '+', 'y', 'yes', 'on', 'true', 'enable', 'enabled'], true)) {
         return true;
     }
-    if (is_string($value)) {
-        return match ($value = trim($value)) {
-            '1', 'yes', 'true' => true,
-            '0', 'no', 'false' => false,
-            default => empty($value),
-        };
+    if (in_array($value, [false, 0, '0', '-', 'n', 'no', 'off', 'false', 'disable', 'disabled'], true)) {
+        return false;
     }
-    if ($is_resource = is_resource($value)) {
-        return $is_resource; // false if closed
-    }
-    return !empty($value);
+    return (bool)$value;
 }
 
 /**

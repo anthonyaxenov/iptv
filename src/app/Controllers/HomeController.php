@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Controllers;
 
 use App\Core\PlaylistProcessor;
+use App\Core\RedirectedPlaylist;
 use Exception;
 use Flight;
 
@@ -27,17 +28,6 @@ class HomeController extends Controller
     }
 
     /**
-     * Возвращает размер одной страницы списка плейлистов
-     *
-     * @return int Указанный в конфиге размер либо 10, если он выходит за диапазоны от 5 до 100
-     */
-    protected function getPageSize(): int
-    {
-        $size = config('app.page_size');
-        return empty($size) || $size < 5 || $size > 100 ? 10 : $size;
-    }
-
-    /**
      * Отображает главную страницу на указанной странице списка плейлистов
      *
      * @param int $page
@@ -52,13 +42,13 @@ class HomeController extends Controller
             Flight::redirect(base_url($id));
             die;
         }
+
         // иначе формируем и сортируем список при необходимости, рисуем страницу
-        $per_page = $this->getPageSize();
-        $list = $this->ini->playlists->where('redirect_id', null);
-        if ($sort_by = config('app.sort_by')) {
-            $list = $list->sortBy($sort_by);
-        }
-        $list = $list->forPage($page, $per_page);
+        $per_page = 10;
+        $list = $this->ini->playlists
+            ->filter(static fn ($playlist) => !($playlist instanceof RedirectedPlaylist))
+            ->forPage($page, $per_page);
+
         view('list', [
             'updated_at' => $this->ini->updatedAt(),
             'count' => $this->ini->playlists->count(),
