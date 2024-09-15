@@ -1,9 +1,11 @@
 {
     "require": {
-        "illuminate/collections": "^9.26",
-        "mikecao/flight": "^2.0",
-        "symfony/dotenv": "^6.1",
-        "twig/twig": "^3.4"
+        "php": "^8.2",
+        "ext-json": "*",
+        "illuminate/collections": "^11.0",
+        "mikecao/flight": "^3.0",
+        "symfony/dotenv": "^7.0",
+        "twig/twig": "^3.14"
     },
     "autoload": {
         "psr-4": {
@@ -14,7 +16,10 @@
         ]
     },
     "scripts": {
-        "clear-views": "docker exec -ti iptv-php rm -rf cache/views"
+        "clear-views": "docker exec -ti iptv-php rm -rf cache/views",
+        "post-install-cmd": [
+            "clear-views"
+        ]
     },
     "config": {
         "optimize-autoloader": true,
