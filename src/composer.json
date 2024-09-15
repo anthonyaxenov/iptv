@@ -2,9 +2,9 @@
     "require": {
         "php": "^8.2",
         "ext-json": "*",
-        "illuminate/collections": "^11.0",
-        "mikecao/flight": "^3.0",
-        "symfony/dotenv": "^7.0",
+        "illuminate/collections": "^11.23",
+        "mikecao/flight": "^3.12",
+        "symfony/dotenv": "^7.1",
         "twig/twig": "^3.14"
     },
     "autoload": {
@@ -16,9 +16,9 @@
         ]
     },
     "scripts": {
-        "clear-views": "docker exec -ti iptv-php rm -rf cache/views",
+        "clear-views": "rm -rf cache/views",
         "post-install-cmd": [
-            "clear-views"
+            "@clear-views"
         ]
     },
     "config": {
