@@ -4,8 +4,7 @@ downloaded/
 /src/commit
 /src/cache/*
 /src/vendor
-/src/views/custom/*
-!/src/views/custom/custom.twig.example
+/src/views/custom.twig
 *.log
 .env
 *.m3u
