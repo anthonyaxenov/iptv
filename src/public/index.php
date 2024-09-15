@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use App\Core\Bootstrapper;
+use Symfony\Component\Dotenv\Dotenv;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,7 @@ use App\Core\Bootstrapper;
 require '../vendor/autoload.php';
 
 // load .env parameters
-Bootstrapper::bootEnv();
+(new Dotenv())->loadEnv(root_path() . '/.env');
 
 // set up framework according to its config
 Bootstrapper::bootSettings();
@@ -25,9 +26,5 @@ Bootstrapper::bootTwig();
 // set up routes defined in config file
 Bootstrapper::bootRoutes();
 
-/*
-|--------------------------------------------------------------------------
-| Start application
-|--------------------------------------------------------------------------
-*/
+// start application
 Flight::start();
