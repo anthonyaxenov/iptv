@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
-use App\Core\{
-    PlaylistProcessor,
-    RedirectedPlaylist};
 use App\Exceptions\PlaylistNotFoundException;
 use Exception;
 use Flight;
@@ -17,33 +14,16 @@ use Flight;
 class PlaylistController extends Controller
 {
     /**
-     * @var PlaylistProcessor Обработчик ini-списка
-     */
-    protected PlaylistProcessor $ini;
-
-    /**
-     * Конструктор
-     */
-    public function __construct()
-    {
-        $this->ini = new PlaylistProcessor();
-    }
-
-    /**
      * Отправляет запрос с клиента по прямой ссылке плейлиста
      *
-     * @param $id
+     * @param string $id ID плейлиста
      * @return void
      * @throws Exception
      */
-    public function download($id): void
+    public function download(string $id): void
     {
         try {
-            $playlist = $this->ini->playlist($id);
-            if ($playlist instanceof RedirectedPlaylist) {
-                Flight::redirect(base_url($playlist->redirect_id));
-                die;
-            }
+            $playlist = $this->ini->getPlaylist($id);
             Flight::redirect($playlist->pls);
         } catch (PlaylistNotFoundException) {
             $this->notFound($id);
@@ -54,49 +34,27 @@ class PlaylistController extends Controller
     /**
      * Отображает страницу описания плейлиста
      *
-     * @param string $id
+     * @param string $id ID плейлиста
      * @return void
      * @throws Exception
      */
     public function details(string $id): void
     {
-        try {
-            $playlist = $this->ini->playlist($id);
-            if ($playlist instanceof RedirectedPlaylist) {
-                Flight::redirect(base_url($playlist->redirect_id . '/details'));
-                die;
-            }
-            view('details', [
-                ...$playlist->toArray(),
-                ...$this->ini->parse($id),
-            ]);
-        } catch (PlaylistNotFoundException) {
-            $this->notFound($id);
-        }
+        $result = $this->getPlaylistResponse($id);
+
+        view('details', $result);
     }
 
     /**
      * Возвращает JSON с описанием плейлиста
      *
-     * @param string $id
+     * @param string $id ID плейлиста
      * @return void
      * @throws Exception
      */
     public function json(string $id): void
     {
-        try {
-            $playlist = $this->ini->playlist($id);
-            if ($playlist instanceof RedirectedPlaylist) {
-                Flight::redirect(base_url($playlist->redirect_id . '/json'));
-                die;
-            }
-            Flight::json([
-                ...$playlist->toArray(),
-                ...$this->ini->parse($id),
-            ]);
-        } catch (PlaylistNotFoundException) {
-            Flight::response()->status(404)->sendHeaders();
-            Flight::json(['error' => ['message' => 'Playlist not found']]);
-        }
+        $result = $this->getPlaylistResponse($id, true);
+        Flight::json($result);
     }
 }

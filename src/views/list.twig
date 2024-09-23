@@ -26,14 +26,13 @@
                     <strong>{{ id }}</strong>
                 </td>
                 <td class="info">
-                    <strong>{{ playlist.name }}</strong>
                     <span class="badge small bg-secondary text-dark status">loading</span>
+                    <strong>{{ playlist.name }}</strong>
                     <div class="small mt-2">
                         {% if playlist.desc|length > 0 %}
                             <p class="my-1 d-none d-lg-block">{{ playlist.desc }}</p>
                         {% endif %}
-                        <a href="{{ base_url(id ~ '/details') }}">Подробнее...</a>
-{#                        <a class="btn btn-sm btn-outline-light" href="{{ base_url(id ~ '/details') }}">Подробнее...</a>#}
+                        <a href="{{ base_url(id ~ '/details') }}" class="text-light">Подробнее...</a>
                     </div>
                 </td>
                 <td class="text-center count">
@@ -87,9 +86,9 @@
                 if (xhr.readyState === XMLHttpRequest.DONE) {
                     console.log('[' + id + '] DONE', xhr.response)
                     el_status.classList.remove('bg-secondary')
-                    el_status.innerText = xhr.response.status
-                    el_count.innerText = xhr.response?.count ?? 0
-                    switch (xhr.response.status) {
+                    el_status.innerText = xhr.response.status.possibleStatus
+                    el_count.innerText = xhr.response?.content.channelCount ?? 0
+                    switch (xhr.response.status.possibleStatus) {
                         case 'online':
                             el_status.classList.add('bg-success')
                             break

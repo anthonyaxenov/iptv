@@ -8,8 +8,8 @@ use Exception;
 
 class PlaylistNotFoundException extends Exception
 {
-    public function __construct(string $pls_code)
+    public function __construct(string $id)
     {
-        parent::__construct("Плейлист $pls_code не найден!");
+        parent::__construct("Плейлист $id не найден!");
     }
 }

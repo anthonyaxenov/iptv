@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
-use App\Core\PlaylistProcessor;
-use App\Core\RedirectedPlaylist;
 use Exception;
 use Flight;
 
@@ -15,22 +13,9 @@ use Flight;
 class HomeController extends Controller
 {
     /**
-     * @var PlaylistProcessor Обработчик ini-списка
-     */
-    protected PlaylistProcessor $ini;
-
-    /**
-     * Конструктор
-     */
-    public function __construct()
-    {
-        $this->ini = new PlaylistProcessor();
-    }
-
-    /**
-     * Отображает главную страницу на указанной странице списка плейлистов
+     * Отображает главную страницу с учётом пагинации списка плейлистов
      *
-     * @param int $page
+     * @param int $page Текущая страница списка
      * @return void
      * @throws Exception
      */
@@ -44,19 +29,21 @@ class HomeController extends Controller
         }
 
         // иначе формируем и сортируем список при необходимости, рисуем страницу
-        $per_page = 10;
-        $list = $this->ini->playlists
-            ->filter(static fn ($playlist) => !($playlist instanceof RedirectedPlaylist))
-            ->forPage($page, $per_page);
+        $perPage = 10;
+        $playlists = $this->ini->playlists(false);
+        $count = count($playlists);
+        $pageCount = ceil($count / $perPage);
+        $offset = max(0, ($page - 1) * $perPage);
+        $list = array_slice($playlists, $offset, $perPage, true);
 
         view('list', [
             'updated_at' => $this->ini->updatedAt(),
-            'count' => $this->ini->playlists->count(),
+            'count' => $count,
             'pages' => [
-                'count' => ceil($this->ini->playlists->count() / $per_page),
+                'count' => $pageCount,
                 'current' => $page,
             ],
-            'playlists' => $list->toArray(),
+            'playlists' => $list,
         ]);
     }
 

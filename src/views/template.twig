@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>{{ config('app.title') }}</title>
+    <title>{% block title %}{{ config('app.title') }}{% endblock %}</title>
     <meta charset="utf-8">
     <meta name="description" content="Самообновляемые бесплатные IPTV-плейлисты для домашнего просмотра по коротким ссылкам, списки каналов, проверка доступности">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,10 +55,10 @@
             </nav>
         </header>
 
-        <div class="pt-lg-3 px-0 pb-0">
+        <section class="container-fluid h-100 pt-lg-3 px-0 pb-0">
             {% block header %}{% endblock %}
             {% block content %}{% endblock %}
-        </div>
+        </section>
 
         <footer class="py-4 text-center">
             <script src="{{ base_url('js/bootstrap.bundle.min.js') }}"></script>

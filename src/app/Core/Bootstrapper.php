@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 namespace App\Core;
 
-use App\Controllers\AjaxController;
 use App\Extensions\TwigFunctions;
 use Flight;
-use Illuminate\Support\Arr;
 use Twig\Environment;
 use Twig\Extension\DebugExtension;
 use Twig\Loader\FilesystemLoader;
@@ -24,11 +22,19 @@ final class Bootstrapper
      */
     public static function bootSettings(): void
     {
-        $settings = Arr::dot(require_once config_path('app.php'));
-        Arr::map($settings, function ($value, $key) {
-            Flight::set("flight.$key", $value);
-        });
-        Flight::set('config', $settings);
+        $config = require_once config_path('app.php');
+        foreach ($config as $key => $value) {
+            Flight::set($key, $value);
+        }
+        Flight::set('config', $config);
+    }
+
+    public static function bootIni(): void
+    {
+        $loader = new IniFile();
+        $loader->load();
+
+        Flight::set('ini', $loader);
     }
 
     /**
@@ -38,18 +44,20 @@ final class Bootstrapper
      */
     public static function bootTwig(): void
     {
-        $filesystemLoader = new FilesystemLoader(config('views.path'));
-        Flight::register(
-            'view',
-            Environment::class,
-            [$filesystemLoader, config('twig')],
-            function ($twig) {
-                /** @var Environment $twig */
-                Flight::set('twig', $twig);
-                $twig->addExtension(new TwigFunctions());
-                $twig->addExtension(new DebugExtension());
-            }
-        );
+        $twigCfg = [
+            'cache' => config('twig.cache'),
+            'debug' => config('twig.debug'),
+        ];
+
+        $closure = static function ($twig) {
+            /** @var Environment $twig */
+            Flight::set('twig', $twig);
+            $twig->addExtension(new TwigFunctions());
+            $twig->addExtension(new DebugExtension());
+        };
+
+        $loader = new FilesystemLoader(config('flight.views.path'));
+        Flight::register('view', Environment::class, [$loader, $twigCfg], $closure);
     }
 
     /**

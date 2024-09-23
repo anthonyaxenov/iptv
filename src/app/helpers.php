@@ -84,6 +84,7 @@ function env(string $key, mixed $default = null): mixed
 function view(mixed $template, array $data = []): void
 {
     $template = str_contains($template, '.twig') ? $template : "$template.twig";
+    /** @noinspection PhpVoidFunctionResultUsedInspection */
     echo Flight::view()->render($template, $data);
 }
 
@@ -134,16 +135,5 @@ function bool(mixed $value): bool
  */
 function config(string $key, mixed $default = null): mixed
 {
-    $config = Flight::get('config');
-    if (isset($config["flight.$key"])) {
-        return $config["flight.$key"];
-    }
-    if (isset($config[$key])) {
-        return $config[$key];
-    }
-    $config = Arr::undot($config);
-    if (Arr::has($config, $key)) {
-        return Arr::get($config, $key);
-    }
-    return $default;
+    return Flight::get('config')[$key] ?? $default;
 }

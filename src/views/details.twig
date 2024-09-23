@@ -1,39 +1,49 @@
 {% extends "template.twig" %}
 
-{% block title %}{{ title }}{% endblock %}
+{% block title %}{{ name }} - {{ config('app.title') }}{% endblock %}
+
+{% block head %}
+    <style>.tvg-logo-background{max-width:100px;max-height:100px;background:white;padding:2px;border-radius:5px}</style>
+{% endblock %}
 
 {% block header %}
-    <h2>{{ name }}</h2>
-    {% if (encoding.alert) %}
+    <h2>О плейлисте {{ name }}</h2>
+    {% if (content.encoding.alert) %}
         <div class="alert alert-warning small" role="alert">
             Кодировка исходного плейлиста отличается от UTF-8.
-            Он был автоматически с конвертирован из {{ encoding.name }}, чтобы отобразить здесь список каналов.
+            Он был автоматически с конвертирован из {{ content.encoding.name }}, чтобы отобразить здесь список каналов.
             Однако названия каналов могут отображаться некорректно, причём не только здесь, но и в плеере.
         </div>
     {% endif %}
-    {% if (error) %}
+    {% if (status.errCode > 0) %}
         <div class="alert alert-danger small" role="alert">
-            Ошибка плейлиста: [{{ error.code }}] {{ error.message }}
+            Ошибка плейлиста: [{{ status.errCode }}] {{ status.errText }}
         </div>
     {% endif %}
 {% endblock %}
 
+{% block footer %}
+    <script src="{{ base_url('js/list.min.js') }}"></script>
+    <script>
+        var list = new List('chlist',{valueNames:['chname','chindex']});
+    </script>
+{% endblock %}
+
 {% block content %}
     <div class="row">
-        <div class="col-md-8">
-            <h4>О плейлисте</h4>
+        <div class="col-md-6">
             <table class="table table-dark table-hover small">
                 <tbody>
                 <tr>
                     <td class="w-25">ID</td>
                     <td>
-                        <code>{{ id }}</code>&nbsp;{% if status == 'online' %}
+                        <code>{{ id }}</code>&nbsp;{% if status.possibleStatus == 'online' %}
                         <span class="badge small text-dark bg-success">online</span>
-                    {% elseif status == 'offline' %}
+                    {% elseif status.possibleStatus == 'offline' %}
                         <span class="badge small text-dark bg-danger">offline</span>
-                    {% elseif status == 'timeout' %}
+                    {% elseif status.possibleStatus == 'timeout' %}
                         <span class="badge small text-dark bg-warning">timeout</span>
-                    {% elseif status == 'error' %}
+                    {% elseif status.possibleStatus == 'error' %}
                         <span class="badge small text-dark bg-danger">error</span>
                         {% endif %}
                     </td>
@@ -61,20 +71,31 @@
                 </tbody>
             </table>
         </div>
-        <div class="col-md-4">
-            <h4>Список каналов ({{ count ?? 0 }})</h4>
-            <div class="overflow-auto" style="max-height: 350px;">
-                <table class="table table-dark table-hover small">
-                    <tbody>
-                    {% for channel in channels %}
-                        <tr>
-                            <td>{{ loop.index }}</td>
-                            <td>{{ channel }}</td>
-                        </tr>
-                    {% endfor %}
-                    </tbody>
-                </table>
+
+        <div class="col-md-6">
+            <h4>Список каналов ({{ content.channelCount ?? 0 }})</h4>
+            {% if (content.channelCount > 0) %}
+            <div id="chlist">
+                <input type="text" class="form-control form-control-sm bg-dark text-light mb-2 fuzzy-search" placeholder="Поиск...">
+                <div class="overflow-auto" style="max-height:550px">
+                    <table class="table table-dark table-hover small">
+                        <tbody class="list">
+                        {% for channel in content.channels %}
+                            <tr class="chrow">
+                                <td class="p-1" class="chindex">{{ loop.index }}</td>
+                                <td class="p-1">
+                                    {% if (channel.attributes['tvg-logo']) %}
+                                        <img class="tvg-logo-background" src="{{ channel.attributes['tvg-logo'] }}" />
+                                    {% endif %}
+                                </td>
+                                <td class="p-1 chname">{{ channel.name }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
             </div>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

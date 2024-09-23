@@ -2,7 +2,7 @@
     "require": {
         "php": "^8.2",
         "ext-json": "*",
-        "illuminate/collections": "^11.23",
+        "ext-curl": "*",
         "mikecao/flight": "^3.12",
         "symfony/dotenv": "^7.1",
         "twig/twig": "^3.14"
