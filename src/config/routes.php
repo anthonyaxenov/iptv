@@ -9,6 +9,7 @@ return [
     'GET /' => [HomeController::class, 'index'],
     'GET /page/@page:[0-9]+' => [HomeController::class, 'index'],
     'GET /faq' => [HomeController::class, 'faq'],
+    'GET /logo' => [PlaylistController::class, 'logo'],
     'GET /@id:[a-zA-Z0-9_-]+' => [PlaylistController::class, 'download'],
     'GET /?[a-zA-Z0-9_-]+' => [PlaylistController::class, 'download'],
     'GET /@id:[a-zA-Z0-9_-]+/details' => [PlaylistController::class, 'details'],

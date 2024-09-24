@@ -204,6 +204,16 @@ class Playlist
 
             if ($isChannel) {
                 $channel['url'] = str_starts_with($line, 'http') ? $line : null;
+                $logoUrl = $channel['attributes']['tvg-logo'] ?? null;
+                if (is_string($logoUrl)) {
+                    $logo = new ChannelLogo($logoUrl);
+                    $logo->readFile();
+                    $channel['logo'] = [
+                        'base64' => $logo->asBase64(),
+                        'size' => $logo->size(),
+                        'mime-type' => $logo->mimeType(),
+                    ];
+                }
                 $result['channels'][] = $channel;
                 $isChannel = false;
                 unset($channel);

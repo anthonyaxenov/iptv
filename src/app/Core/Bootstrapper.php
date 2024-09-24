@@ -29,7 +29,7 @@ final class Bootstrapper
         Flight::set('config', $config);
     }
 
-    public static function bootIni(): void
+    public static function bootCore(): void
     {
         $loader = new IniFile();
         $loader->load();

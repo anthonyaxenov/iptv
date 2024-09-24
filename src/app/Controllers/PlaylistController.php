@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
+use App\Core\ChannelLogo;
 use App\Exceptions\PlaylistNotFoundException;
 use Exception;
 use Flight;
@@ -41,7 +42,6 @@ class PlaylistController extends Controller
     public function details(string $id): void
     {
         $result = $this->getPlaylistResponse($id);
-
         view('details', $result);
     }
 
@@ -56,5 +56,35 @@ class PlaylistController extends Controller
     {
         $result = $this->getPlaylistResponse($id, true);
         Flight::json($result);
+    }
+
+    /**
+     * Возвращает логотип канала, кэшируя при необходимости
+     *
+     * @return void
+     */
+    public function logo(): void
+    {
+        $input = Flight::request()->query['url'] ?? null;
+
+        $logo = new ChannelLogo($input);
+        if (!$logo->readFile()) {
+            $logo->fetch();
+        }
+
+        if ($logo->size() === 0) {
+            Flight::notFound();
+            die;
+        }
+
+        $logo->store();
+        $body = $logo->asBase64();
+        $size = $logo->size();
+        $mime = $logo->mimeType();
+
+        Flight::response()
+            ->write($body)
+            ->header('Content-Type', $mime)
+            ->header('Content-Length', (string)$size);
     }
 }

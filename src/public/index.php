@@ -15,6 +15,6 @@ require '../vendor/autoload.php';
 (new Dotenv())->loadEnv(root_path() . '/.env');
 Bootstrapper::bootSettings();
 Bootstrapper::bootTwig();
-Bootstrapper::bootIni();
+Bootstrapper::bootCore();
 Bootstrapper::bootRoutes();
 Flight::start();
