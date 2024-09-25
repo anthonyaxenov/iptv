@@ -125,8 +125,17 @@ class ChannelLogo implements \Stringable
             return null;
         }
 
-        $mime = $this->mimeType();
-        return "data:$mime;base64," . base64_encode($this->rawData);
+        return "data:$this->mimeType;base64," . base64_encode($this->rawData);
+    }
+
+    /**
+     * Возвращает сырое изображение
+     *
+     * @return false|string|null
+     */
+    public function raw(): false|string|null
+    {
+        return $this->rawData;
     }
 
     /**

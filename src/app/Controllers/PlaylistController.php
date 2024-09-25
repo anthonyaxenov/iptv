@@ -78,7 +78,7 @@ class PlaylistController extends Controller
         }
 
         $logo->store();
-        $body = $logo->asBase64();
+        $body = $logo->raw();
         $size = $logo->size();
         $mime = $logo->mimeType();
 
