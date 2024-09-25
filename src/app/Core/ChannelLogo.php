@@ -19,7 +19,7 @@ class ChannelLogo implements \Stringable
     /**
      * @var string|null Путь к файлу изображению на диске
      */
-    protected ?string $path;
+    protected ?string $path = '';
 
     /**
      * @var string|null MIME-тип изображения

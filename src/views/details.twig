@@ -3,7 +3,13 @@
 {% block title %}{{ name }} - {{ config('app.title') }}{% endblock %}
 
 {% block head %}
-    <style>.tvg-logo{max-width:100px;max-height:100px;background:white;padding:2px;border-radius:5px}.tvg-logo{background:unset}</style>
+    <style>
+        img.tvg-logo{max-width:80px;max-height:80px;padding:2px;border-radius:5px}
+        tr.chrow td{padding:3px}
+        td.chindex{width:1%}
+        td.chlogo{width:100px}
+        div.chlist-table{max-height:550px}
+    </style>
 {% endblock %}
 
 {% block header %}
@@ -76,23 +82,31 @@
             <h4>Список каналов ({{ content.channelCount ?? 0 }})</h4>
             {% if (content.channelCount > 0) %}
             <div id="chlist">
-                <input type="text" class="form-control form-control-sm bg-dark text-light mb-2 fuzzy-search" placeholder="Поиск...">
-                <div class="overflow-auto" style="max-height:550px">
+                <input type="text"
+                       class="form-control form-control-sm bg-dark text-light mb-2 fuzzy-search"
+                       placeholder="Поиск..."
+                />
+                <div class="chlist-table overflow-auto">
                     <table class="table table-dark table-hover small">
                         <tbody class="list">
                         {% for channel in content.channels %}
                             <tr class="chrow">
-                                <td class="p-1" class="chindex">{{ loop.index }}</td>
-                                <td class="p-1">
+                                <td class="chindex">{{ loop.index }}</td>
+                                <td class="chlogo text-center">
+                                    <img class="tvg-logo"
                                     {% if (channel.logo.base64) %}
-                                        <img class="tvg-logo yes" src="{{ channel.logo.base64 }}" />
+                                        src="{{ channel.logo.base64 }}"
                                     {% elseif (channel.attributes['tvg-logo']) %}
-                                        <img loading="lazy" class="tvg-logo" src="{{ base_url('logo?url=' ~ channel.attributes['tvg-logo']) }}" />
+                                        src="{{ base_url('logo?url=' ~ channel.attributes['tvg-logo']) }}"
+                                        loading="lazy"
                                     {% else %}
-                                        <img class="tvg-logo.empty" src="{{ base_url('no-tvg-logo.png') }}"/>
+                                        src="{{ base_url('no-tvg-logo.png') }}"
                                     {% endif %}
+                                        alt="Логотип канала '{{ channel.name }}'"
+                                        title="Логотип канала '{{ channel.name }}'"
+                                    />
                                 </td>
-                                <td class="p-1 chname">{{ channel.name }}</td>
+                                <td class="chname">{{ channel.name }}</td>
                             </tr>
                         {% endfor %}
                         </tbody>
