@@ -86,7 +86,7 @@
                                 <td class="p-1">
                                     {% if (channel.logo.base64) %}
                                         <img class="tvg-logo" src="{{ channel.logo.base64 }}" />
-                                    {% else %}
+                                    {% elseif (channel.attributes['tvg-logo']) %}
                                         <img loading="lazy" class="tvg-logo" src="{{ base_url('logo?url=' ~ channel.attributes['tvg-logo']) }}" />
                                     {% endif %}
                                 </td>
