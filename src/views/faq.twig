@@ -16,6 +16,10 @@
                 видео/аудио потоков, программ телепередач, плейлистов и их поддержки. Этим занимаются администраторы
                 ресурсов, указанные как источник, и те, с чьих ресурсов ведётся трансляция.
             </p>
+            <p>
+                За содержимое плейлистов и их качество отвечают авторы плейлистов. На стороне сервиса управляются сами
+                плейлисты.
+            </p>
             <p class="mb-5">
                 Сервис "{{ config('app.title') }}" ({{ base_url() }}) предоставляет только информацию об активности
                 плейлистов, найденных в открытом доступе, и короткие ссылки на них для удобства использования в ПО.
@@ -24,8 +28,26 @@
             </p>
 
             <div class="accordion" id="faq-accordion">
-                <div class="accordion-item bg-dark">
-                    <h2 class="accordion-header bg-dark" id="h-howtouse">
+                <div class="accordion-item bg-dark text-light">
+                    <h2 class="accordion-header" id="h-purpose">
+                        <button class="accordion-button text-light bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#purpose" aria-expanded="false" aria-controls="purpose">
+                            Для чего нужен сервис?
+                        </button>
+                    </h2>
+                    <div id="purpose" class="accordion-collapse collapse" aria-labelledby="h-purpose" data-bs-parent="#faq-accordion">
+                        <div class="accordion-body">
+                            <p>Изначально сервис создавался "для себя", чтобы:</p>
+                            <ul>
+                                <li>сократить ссылки на сторонние плейлисты и их было проще вводить с пульта;</li>
+                                <li>собрать в одном месте наиболее годные плейлисты.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="accordion-item bg-dark text-light">
+                    <h2 class="accordion-header" id="h-howtouse">
                         <button class="accordion-button text-light bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#howtouse" aria-expanded="false" aria-controls="howtouse">
                             Как пользоваться сервисом?
                         </button>
@@ -42,7 +64,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="accordion-item bg-dark">
+
+                <div class="accordion-item bg-dark text-light">
                     <h2 class="accordion-header bg-dark" id="h-howtoconnect">
                         <button class="accordion-button text-light bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#howtoconnect" aria-expanded="false" aria-controls="howtoconnect">
                             Как подключить плейлист?
@@ -55,17 +78,35 @@
                         </p>
                     </div>
                 </div>
-                <div class="accordion-item bg-dark">
+
+                <div class="accordion-item bg-dark text-light">
                     <h2 class="accordion-header bg-dark" id="h-isitfree">
                         <button class="accordion-button text-light bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#isitfree" aria-expanded="false" aria-controls="isitfree">
                             Эти плейлисты и каналы в них -- бесплатны?
                         </button>
                     </h2>
                     <div id="isitfree" class="accordion-collapse collapse" aria-labelledby="h-isitfree" data-bs-parent="#faq-accordion">
-                        <p class="accordion-body">Возможно. По крайней мере, так утверждают источники. Но гарантий никаких никто не даёт.</p>
+                        <p class="accordion-body">
+                            Возможно. По крайней мере, так утверждают источники. Но гарантий никаких никто не даёт.
+                        </p>
                     </div>
                 </div>
-                <div class="accordion-item bg-dark">
+
+                <div class="accordion-item bg-dark text-light">
+                    <h2 class="accordion-header" id="h-logos">
+                        <button class="accordion-button text-light bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#logos" aria-expanded="false" aria-controls="logos">
+                            Откуда берутся логотипы каналов и программы передач?
+                        </button>
+                    </h2>
+                    <div id="logos" class="accordion-collapse collapse" aria-labelledby="h-logos" data-bs-parent="#faq-accordion">
+                        <p class="accordion-body">
+                            Всё это (не) указывается внутри плейлиста его авторами.
+                            Но в некоторых плеерах можно вручную указывать программу передач (см. ниже).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-dark text-light">
                     <h2 class="accordion-header bg-dark" id="h-which">
                         <button class="accordion-button text-light bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#which" aria-expanded="false" aria-controls="which">
                             Какие плейлисты попадают сюда?
@@ -88,7 +129,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item bg-dark">
+
+                <div class="accordion-item bg-dark text-light">
                     <h2 class="accordion-header bg-dark" id="h-statuses">
                         <button class="accordion-button text-light bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#statuses" aria-expanded="false" aria-controls="statuses">
                             Что означают статусы плейлистов?
@@ -123,7 +165,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item bg-dark">
+
+                <div class="accordion-item bg-dark text-light">
                     <h2 class="accordion-header bg-dark" id="h-donttrust">
                         <button class="accordion-button text-light bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#donttrust" aria-expanded="false" aria-controls="donttrust">
                             Почему нельзя доверять результатам проверки?
@@ -145,7 +188,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item bg-dark">
+
+                <div class="accordion-item bg-dark text-light">
                     <h2 class="accordion-header bg-dark" id="h-guarantee">
                         <button class="accordion-button text-light bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#guarantee" aria-expanded="false" aria-controls="guarantee">
                             Какова гарантия, что я добавлю себе плейлист отсюда и он работать хоть сколько-нибудь долго?
@@ -163,7 +207,19 @@
                         </p>
                     </div>
                 </div>
-                <div class="accordion-item bg-dark">
+
+                <div class="accordion-item bg-dark text-light">
+                    <h2 class="accordion-header" id="h-panic">
+                        <button class="accordion-button text-warning bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#panic" aria-expanded="false" aria-controls="panic">
+                            У меня перестал работать/исчез любимый канал/плейлист! Нет лого канала/программы передач!
+                        </button>
+                    </h2>
+                    <div id="panic" class="accordion-collapse collapse" aria-labelledby="h-panic" data-bs-parent="#faq-accordion">
+                        <p class="accordion-body">Ну штош ¯\_(ツ)_/¯</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-dark text-light">
                     <h2 class="accordion-header bg-dark" id="h-epg">
                         <button class="accordion-button text-light bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#epg" aria-expanded="false" aria-controls="epg">
                             Где взять программу передач (EPG)?
@@ -179,10 +235,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item bg-dark">
+
+                <div class="accordion-item bg-dark text-light">
                     <h2 class="accordion-header bg-dark" id="h-howoftenlist">
                         <button class="accordion-button text-light bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#howoftenlist" aria-expanded="false" aria-controls="howoftenlist">
-                            Как часто обновляется этот список?
+                            Как часто обновляется список плейлистов?
                         </button>
                     </h2>
                     <div id="howoftenlist" class="accordion-collapse collapse" aria-labelledby="h-howoftenlist" data-bs-parent="#faq-accordion">
@@ -193,7 +250,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="accordion-item bg-dark">
+
+                <div class="accordion-item bg-dark text-light">
                     <h2 class="accordion-header bg-dark" id="h-howoftench">
                         <button class="accordion-button text-light bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#howoftench" aria-expanded="false" aria-controls="howoftench">
                             Как часто обновляется содержимое плейлистов?
@@ -205,7 +263,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="accordion-item bg-dark">
+
+                <div class="accordion-item bg-dark text-light">
                     <h2 class="accordion-header bg-dark" id="h-api">
                         <button class="accordion-button text-light bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#api" aria-expanded="false" aria-controls="api">
                             Есть ли API? Как им пользоваться?
@@ -217,7 +276,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="accordion-item bg-dark">
+
+                <div class="accordion-item bg-dark text-light">
                     <h2 class="accordion-header bg-dark" id="h-howtoadd">
                         <button class="accordion-button text-light bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#howtoadd" aria-expanded="false" aria-controls="howtoadd">
                             Как пополнить этот список?
@@ -230,6 +290,7 @@
                         </p>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
