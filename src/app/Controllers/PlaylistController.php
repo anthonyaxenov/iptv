@@ -73,8 +73,7 @@ class PlaylistController extends Controller
         }
 
         if ($logo->size() === 0) {
-            Flight::notFound();
-            die;
+            $logo->setDefault();
         }
 
         $logo->store();

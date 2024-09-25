@@ -19,7 +19,7 @@ class ChannelLogo implements \Stringable
     /**
      * @var string|null Путь к файлу изображению на диске
      */
-    public readonly ?string $path;
+    protected ?string $path;
 
     /**
      * @var string|null MIME-тип изображения
@@ -112,6 +112,17 @@ class ChannelLogo implements \Stringable
 
         $this->rawData = @file_get_contents($this->path);
         return is_string($this->rawData);
+    }
+
+    /**
+     * Считывает дефолтный эскиз вместо логотипа
+     *
+     * @return bool
+     */
+    public function setDefault(): bool
+    {
+        $this->path = root_path('public/no-tvg-logo.png');
+        return$this->readFile();
     }
 
     /**
