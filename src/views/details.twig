@@ -3,7 +3,7 @@
 {% block title %}{{ name }} - {{ config('app.title') }}{% endblock %}
 
 {% block head %}
-    <style>.tvg-logo{max-width:100px;max-height:100px;background:white;padding:2px;border-radius:5px}</style>
+    <style>.tvg-logo{max-width:100px;max-height:100px;background:white;padding:2px;border-radius:5px}.tvg-logo{background:unset}</style>
 {% endblock %}
 
 {% block header %}
@@ -85,9 +85,11 @@
                                 <td class="p-1" class="chindex">{{ loop.index }}</td>
                                 <td class="p-1">
                                     {% if (channel.logo.base64) %}
-                                        <img class="tvg-logo" src="{{ channel.logo.base64 }}" />
+                                        <img class="tvg-logo yes" src="{{ channel.logo.base64 }}" />
                                     {% elseif (channel.attributes['tvg-logo']) %}
                                         <img loading="lazy" class="tvg-logo" src="{{ base_url('logo?url=' ~ channel.attributes['tvg-logo']) }}" />
+                                    {% else %}
+                                        <img class="tvg-logo.empty" src="{{ base_url('no-tvg-logo.png') }}"/>
                                     {% endif %}
                                 </td>
                                 <td class="p-1 chname">{{ channel.name }}</td>
