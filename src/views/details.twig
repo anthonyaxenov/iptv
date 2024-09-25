@@ -1,6 +1,6 @@
 {% extends "template.twig" %}
 
-{% block title %}{{ name }} - {{ config('app.title') }}{% endblock %}
+{% block title %}[{{ id }}] {{ name }} - {{ config('app.title') }}{% endblock %}
 
 {% block head %}
     <style>
@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% block header %}
-    <h2>О плейлисте {{ name }}</h2>
+    <h2>О плейлисте: {{ name }}</h2>
     {% if (content.encoding.alert) %}
         <div class="alert alert-warning small" role="alert">
             Кодировка исходного плейлиста отличается от UTF-8.
@@ -37,12 +37,12 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-md-6">
-            <table class="table table-dark table-hover small">
+        <div class="col-lg-7">
+            <table class="table table-dark table-hover small mb-lg-5">
                 <tbody>
                 <tr>
-                    <td class="w-25">ID</td>
-                    <td>
+                    <th class="w-25" scope="row">ID</th>
+                    <td class="text-break">
                         <code>{{ id }}</code>&nbsp;{% if status.possibleStatus == 'online' %}
                         <span class="badge small text-dark bg-success">online</span>
                     {% elseif status.possibleStatus == 'offline' %}
@@ -51,34 +51,48 @@
                         <span class="badge small text-dark bg-warning">timeout</span>
                     {% elseif status.possibleStatus == 'error' %}
                         <span class="badge small text-dark bg-danger">error</span>
-                        {% endif %}
+                    {% endif %}
                     </td>
                 </tr>
                 <tr>
-                    <td>Описание</td>
-                    <td><p>{{ desc }}</p></td>
+                    <th scope="row">Описание</th>
+                    <td class="text-break"><p>{{ desc }}</p></td>
                 </tr>
                 <tr>
-                    <td><b>Ccылка для ТВ</b></td>
+                    <th scope="row">Ccылка для ТВ</th>
                     <td><b onclick="prompt('Скопируй адрес плейлиста', '{{ url }}')"
                            data-bs-toggle="tooltip"
                            data-bs-placement="top"
                            title="Нажми на ссылку, чтобы скопировать её в буфер обмена"
-                           class="font-monospace cursor-pointer">{{ url }}</b></td>
+                           class="font-monospace cursor-pointer text-break">{{ url }}</b></td>
                 </tr>
                 <tr>
-                    <td>M3U</td>
-                    <td>{{ pls }}</td>
+                    <th scope="row">M3U</th>
+                    <td class="text-break">{{ pls }}</td>
                 </tr>
                 <tr>
-                    <td>Источник</td>
-                    <td>{{ src }}</td>
+                    <th scope="row">Источник</th>
+                    <td class="text-break">{{ src }}</td>
                 </tr>
                 </tbody>
             </table>
+
+            {% if (content.attributes) %}
+            <h4>Дополнительные атрибуты</h4>
+            <table class="table table-dark table-hover small">
+                <tbody>
+                {% for attribute,value in content.attributes %}
+                    <tr>
+                        <th class="w-25" scope="row">{{ attribute }}</th>
+                        <td class="text-break">{{ value }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            {% endif %}
         </div>
 
-        <div class="col-md-6">
+        <div class="col-lg-5">
             <h4>Список каналов ({{ content.channelCount ?? 0 }})</h4>
             {% if (content.channelCount > 0) %}
             <div id="chlist">
@@ -106,7 +120,7 @@
                                         title="Логотип канала '{{ channel.name }}'"
                                     />
                                 </td>
-                                <td class="chname">{{ channel.name }}</td>
+                                <td class="chname text-break">{{ channel.name }}</td>
                             </tr>
                         {% endfor %}
                         </tbody>
