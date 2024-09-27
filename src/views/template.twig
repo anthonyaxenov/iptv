@@ -16,7 +16,6 @@
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="msapplication-TileImage" content="{{ base_url('/favicon/mstile-144x144.png') }}">
     <meta name="theme-color" content="#212529">
-    {% include("custom.twig") ignore missing %}
     {% block head %}{% endblock %}
 </head>
 <body class="bg-dark text-light">
@@ -75,5 +74,6 @@
             </span>
         </footer>
     </div>
+    {% include("custom.twig") ignore missing %}
 </body>
 </html>
