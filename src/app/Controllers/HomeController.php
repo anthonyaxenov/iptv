@@ -29,7 +29,7 @@ class HomeController extends Controller
         }
 
         // иначе формируем и сортируем список при необходимости, рисуем страницу
-        $perPage = 10;
+        $perPage = 20;
         $playlists = $this->ini->playlists(false);
         $count = count($playlists);
         $pageCount = ceil($count / $perPage);
