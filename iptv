@@ -3,7 +3,7 @@
 
 CONTAINER="iptv-php" # the name of the container in which to 'exec' something
 CONFIG="$(dirname $([ -L $0 ] && readlink -f $0 || echo $0))/docker-compose.yml" # path to compose yml file
-CMD="docker-compose -f $CONFIG" # docker-compose command
+CMD="docker compose -f $CONFIG" # docker-compose command
 APP_URL='http://localhost:8080/'
 
 open_browser() {
