@@ -22,9 +22,7 @@
         <tbody>
         {% for id, playlist in playlists %}
             <tr class="pls" data-playlist-id="{{ id }}">
-                <td class="text-center id">
-                    <strong>{{ id }}</strong>
-                </td>
+                <td class="text-center font-monospace id">{{ id }}</td>
                 <td class="info">
                     <span class="badge small bg-secondary text-dark status">loading</span>
                     <strong>{{ playlist.name }}</strong>
@@ -42,8 +40,6 @@
                 </td>
                 <td class="col-3 d-none d-sm-table-cell">
                     <span onclick="prompt('Скопируй адрес плейлиста', '{{ playlist.url }}')"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="top"
                           title="Нажми на ссылку, чтобы скопировать её в буфер обмена"
                           class="font-monospace cursor-pointer">
                         {{ playlist.url }}
@@ -84,11 +80,10 @@
             let el_count = tr.querySelector('td.count')
             xhr.onreadystatechange = () => {
                 if (xhr.readyState === XMLHttpRequest.DONE) {
-                    console.log('[' + id + '] DONE', xhr.response)
                     el_status.classList.remove('bg-secondary')
-                    el_status.innerText = xhr.response.status.possibleStatus
+                    el_status.innerText = xhr.response?.status.possibleStatus ?? 'error'
                     el_count.innerText = xhr.response?.content.channelCount ?? 0
-                    switch (xhr.response.status.possibleStatus) {
+                    switch (el_status.innerText) {
                         case 'online':
                             el_status.classList.add('bg-success')
                             break
@@ -99,24 +94,21 @@
                             el_status.classList.add('bg-danger')
                             break
                     }
-                    if (xhr.response.error) {
+                    if (xhr.response?.error) {
                         el_status.title = '[' + xhr.response.error.code + '] ' + xhr.response.error.message
                     }
                 }
             }
             xhr.onerror = () => {
-                console.log('[' + id + '] ERROR', xhr.response)
                 el_status.classList.add('bg-danger')
                 el_status.innerText = 'error'
                 el_count.innerText = 0
             }
             xhr.onabort = () => {
-                console.log('[' + id + '] ABORTED', xhr.response)
                 el_status.classList.add('bg-secondary')
                 el_count.innerText = 0
             }
             xhr.ontimeout = () => {
-                console.log('[' + id + '] TIMEOUT', xhr.response)
                 el_status.classList.add('bg-secondary')
                 el_status.innerText = 'timeout'
                 el_count.innerText = 0
