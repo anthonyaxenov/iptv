@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use App\Controllers\HomeController;
-use App\Controllers\PlaylistController;
+use Controllers\HomeController;
+use Controllers\PlaylistController;
 
 return [
     'GET /' => [HomeController::class, 'index'],

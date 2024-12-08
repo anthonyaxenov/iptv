@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Core\Bootstrapper;
+use Core\Bootstrapper;
 use Symfony\Component\Dotenv\Dotenv;
 
 /*

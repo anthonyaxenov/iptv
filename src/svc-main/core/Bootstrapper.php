@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-namespace App\Core;
+namespace Core;
 
-use App\Extensions\TwigFunctions;
 use Flight;
 use Twig\Environment;
 use Twig\Extension\DebugExtension;
@@ -22,7 +21,7 @@ final class Bootstrapper
      */
     public static function bootSettings(): void
     {
-        $config = require_once config_path('app.php');
+        $config = require_once root_path('config.php');
         foreach ($config as $key => $value) {
             Flight::set($key, $value);
         }
@@ -67,7 +66,7 @@ final class Bootstrapper
      */
     public static function bootRoutes(): void
     {
-        $routes = require_once config_path('routes.php');
+        $routes = require_once root_path('routes.php');
         foreach ($routes as $route => $handler) {
             Flight::route($route, $handler);
         }

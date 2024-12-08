@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Controllers;
+namespace Controllers;
 
 use Exception;
 use Flight;

@@ -1,7 +1,7 @@
 #!/bin/bash
 # https://gist.github.com/anthonyaxenov/89c99e09ddb195985707e2b24a57257d
 
-CONTAINER="iptv-php" # the name of the container in which to 'exec' something
+CONTAINER="iptv-main" # the name of the container in which to 'exec' something
 CONFIG="$(dirname $([ -L $0 ] && readlink -f $0 || echo $0))/docker-compose.yml" # path to compose yml file
 CMD="docker compose -f $CONFIG" # docker-compose command
 APP_URL='http://localhost:8080/'
@@ -29,6 +29,6 @@ case "$1" in
     'restart'   ) $CMD stop && $CMD start ;; # restart containers
     'rebuild'   ) $CMD down --remove-orphans && $CMD up -d --build ;; # rebuild containers
     'open'      ) open_browser $APP_URL && echo -e "\nYou're welcome!\n\t$APP_URL" ;;
-    'hooks'     ) ./hooks/post-commit && cp hooks/* .git/hooks ;;
+    'hooks'     ) сp -f hooks/* .git/hooks ;;
     *           ) docker exec -ti $CONTAINER $* ;; # exec anything else in container
 esac

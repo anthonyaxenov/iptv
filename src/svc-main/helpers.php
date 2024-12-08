@@ -18,17 +18,6 @@ function root_path(string $path = ''): string
 }
 
 /**
- * Return path to application configuration directory
- *
- * @param string $path
- * @return string
- */
-function config_path(string $path = ''): string
-{
-    return root_path("config/$path");
-}
-
-/**
  * Returns path to app cache
  *
  * @param string $path

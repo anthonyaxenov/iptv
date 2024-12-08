@@ -4,8 +4,8 @@ networks:
 
 services:
 
-  php:
-    container_name: iptv-php
+  svc-main:
+    container_name: iptv-svc-main
     env_file:
       - .env
     environment:
@@ -20,8 +20,9 @@ services:
       - ./docker/php/www.conf:/usr/local/etc/php-fpm.d/www.conf:ro
       - ./docker/php/${IPTV_ENV}.php.ini:/usr/local/etc/php/conf.d/php.ini:ro
       - ./log/php:/var/log/php:rw
-      - ./src:/var/www:rw
-      - ./playlists.ini:/var/www/config/playlists.ini:ro
+      - ./src/svc-main:/var/www:rw
+      - ./commit:/var/www/commit:ro
+      - ./playlists.ini:/var/www/playlists.ini:ro
 
   nginx:
     container_name: iptv-nginx
@@ -31,12 +32,12 @@ services:
       - iptv
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - ./docker/nginx/vhost.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./docker/nginx/vhost.conf:/etc/nginx/conf.d/default.conf
       - ./log/nginx:/var/log/nginx:rw
-      - ./src:/var/www:ro
+      - ./src/svc-main:/var/www:ro
     ports:
       - '8080:80'
     links:
-      - php
+      - svc-main
     depends_on:
-      - php
+      - svc-main

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Core;
+namespace Core;
 
 class ChannelLogo implements \Stringable
 {
