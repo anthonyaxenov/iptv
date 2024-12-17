@@ -4,6 +4,7 @@
         "ext-json": "*",
         "ext-curl": "*",
         "ext-fileinfo": "*",
+        "ext-redis": "*",
         "mikecao/flight": "^3.12",
         "symfony/dotenv": "^7.1",
         "twig/twig": "^3.14"

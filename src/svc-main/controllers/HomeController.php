@@ -21,6 +21,8 @@ class HomeController extends Controller
      */
     public function index(int $page = 1): void
     {
+        $redis = Flight::get('redis');
+
         // если пришёл любой get-параметр, то считаем его как id плейлиста и перебрасываем на страницу о нём
         if (Flight::request()->query->count() > 0) {
             $id = Flight::request()->query->keys()[0];

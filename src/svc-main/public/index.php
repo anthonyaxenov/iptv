@@ -17,4 +17,5 @@ Bootstrapper::bootSettings();
 Bootstrapper::bootTwig();
 Bootstrapper::bootCore();
 Bootstrapper::bootRoutes();
+Bootstrapper::bootRedis();
 Flight::start();

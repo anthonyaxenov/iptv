@@ -71,4 +71,21 @@ final class Bootstrapper
             Flight::route($route, $handler);
         }
     }
+
+    public static function bootRedis(): void
+    {
+        $options = [
+            'host' => config('redis.host'),
+            'port' => config('redis.port'),
+            // 'username' => config('redis.user'),
+            // 'pass' => config('redis.password'),
+            'connectTimeout' => 1,
+        ];
+
+        $redis = new \Redis($options);
+        $redis->select((int)config('redis.database'));
+        $redis->setOption(\Redis::OPT_SERIALIZER, \Redis::SERIALIZER_JSON);
+
+        Flight::set('redis', $redis);
+    }
 }
