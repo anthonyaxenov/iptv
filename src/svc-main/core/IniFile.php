@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Core;
+namespace Core;
 
-use App\Exceptions\PlaylistNotFoundException;
 use Exception;
+use Exceptions\PlaylistNotFoundException;
 
 /**
  * Класс для работы с ini-файлом плейлистов
@@ -40,7 +40,7 @@ class IniFile
      */
     public function load(): void
     {
-        $filepath = config_path('playlists.ini');
+        $filepath = root_path('playlists.ini');
         $this->updated_at = date('d.m.Y h:i', filemtime($filepath));
 
         $this->rawIni = parse_ini_file($filepath, true);

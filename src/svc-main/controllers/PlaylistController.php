@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Controllers;
+namespace Controllers;
 
-use App\Core\ChannelLogo;
-use App\Exceptions\PlaylistNotFoundException;
+use Core\ChannelLogo;
 use Exception;
+use Exceptions\PlaylistNotFoundException;
 use Flight;
 
 /**

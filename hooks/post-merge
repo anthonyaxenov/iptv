@@ -3,5 +3,5 @@
 # для его отображения в подвале страницы и очищает
 # кеш шаблонов twig после слияния веток
 # главным образом необходимо при git pull
-git rev-parse HEAD > src/commit
-docker exec -ti iptv-php rm -rf cache/views
+git rev-parse HEAD > commit
+docker exec -ti svc-main rm -rf cache/views

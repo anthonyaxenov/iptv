@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\Controllers;
+namespace Controllers;
 
-use App\Core\IniFile;
-use App\Core\Playlist;
-use App\Exceptions\PlaylistNotFoundException;
+use Core\IniFile;
+use Core\Playlist;
 use Exception;
+use Exceptions\PlaylistNotFoundException;
 use Flight;
 use Random\RandomException;
 

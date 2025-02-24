@@ -1,0 +1,10 @@
+vendor/
+cache/
+
+views/custom.twig
+playlists.ini
+commit
+*.log
+.env
+
+!/**/.gitkeep

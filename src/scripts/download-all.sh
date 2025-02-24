@@ -18,7 +18,7 @@
 
 TOOLS_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}"; )" &> /dev/null && pwd 2> /dev/null; )";
 DL_DIR="$TOOLS_DIR/downloaded"
-INI_FILE="$(dirname "$TOOLS_DIR")/playlists.ini"
+INI_FILE="$(dirname "$TOOLS_DIR")/../../playlists.ini"
 
 rm -rf "$DL_DIR" && \
     mkdir -p "$DL_DIR" && \
