@@ -1,10 +1,16 @@
 #!/bin/bash
 # https://gist.github.com/anthonyaxenov/89c99e09ddb195985707e2b24a57257d
 
+set -e
+
+[[ -f ./src/svc-main/.env ]] || cp ./src/svc-main/.env.example ./src/svc-main/.env
+[[ -f ./.env ]] || cp ./.env.example ./.env
+source ./.env
+
 CONTAINER="iptv-main" # the name of the container in which to 'exec' something
 CONFIG="$(dirname $([ -L $0 ] && readlink -f $0 || echo $0))/docker-compose.yml" # path to compose yml file
 CMD="docker compose -f $CONFIG" # docker-compose command
-APP_URL='http://localhost:8080/'
+APP_URL="http://localhost:${IPTV_NGINX_PORT}/"
 
 open_browser() {
     if which xdg-open > /dev/null; then
@@ -15,20 +21,66 @@ open_browser() {
 }
 
 case "$1" in
-    '' | 'help' ) echo -e "Provide one of operations: \t init, start, stop, up, down, restart, rebuild, open, hooks";
-                  echo "Otherwise all args will passed to 'docker exec -ti $CONTAINER ...'" ;;
-    'init'      ) cp src/.env.example src/.env && \
-                  ./iptv hooks && \
-                  ./iptv up && \
-                  ./iptv composer i && \
-                  echo "Project started successfully! $APP_URL" ;;
-    'up'        ) $CMD up -d --build && ./iptv open ;; # build and start containers
-    'down'      ) $CMD down --remove-orphans ;; # stop and remove containers
-    'start'     ) $CMD start ;; # start containers
-    'stop'      ) $CMD stop ;; # stop containers
-    'restart'   ) $CMD stop && $CMD start ;; # restart containers
-    'rebuild'   ) $CMD down --remove-orphans && $CMD up -d --build ;; # rebuild containers
-    'open'      ) open_browser $APP_URL && echo -e "\nYou're welcome!\n\t$APP_URL" ;;
-    'hooks'     ) сp -f hooks/* .git/hooks ;;
-    *           ) docker exec -ti $CONTAINER $* ;; # exec anything else in container
+    # help message
+    ''|'help')
+        echo -e "Provide one of operations: \t init, start, stop, up, down, restart, rebuild, open, hooks"
+        echo "Otherwise all args will passed to 'docker exec -ti $CONTAINER ...'"
+        ;;
+
+    # quick start
+    'init')
+        ./iptv hooks
+        ./iptv up
+        ./iptv composer i
+        echo "Project started successfully! $APP_URL"
+        ;;
+
+    # build and start containers
+    'up')
+        $CMD up -d --build
+        ./iptv open
+        ;;
+
+    # stop and remove containers
+    'down')
+        $CMD down --remove-orphans
+        ;;
+
+    # start containers
+    'start')
+        $CMD start
+        ;;
+
+    # stop containers
+    'stop')
+        $CMD stop
+        ;;
+
+    # restart containers
+    'restart')
+        $CMD stop
+        $CMD start
+        ;;
+
+    # rebuild containers
+    'rebuild')
+        $CMD down --remove-orphans
+        $CMD up -d --build
+        ;;
+
+    # open url in web-browser
+    'open')
+        open_browser $APP_URL
+        echo -e "\nYou're welcome!\n\t$APP_URL" \
+        ;;
+
+    # install git hooks
+    'hooks')
+        сp -f hooks/* .git/hooks
+        ;;
+
+    # exec anything else in container
+    *)
+        docker exec -ti $CONTAINER $*
+        ;;
 esac

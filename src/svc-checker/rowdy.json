@@ -1,0 +1,6343 @@
+[
+    {
+        "category": "БЕЛАРУСЬ [BY]",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Беларусь 24 (Беларусь)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/blrus/CH_BELARUS24.m3u8"
+    },
+    {
+        "category": "БЕЛАРУСЬ [BY]",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "БелРос (Беларусь)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/blrus/CH_BELROS.m3u8"
+    },
+    {
+        "category": "ДЕТСКИЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "МАМА",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_MAMA.m3u8"
+    },
+    {
+        "category": "ДЕТСКИЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "МУЛЬТ И МУЗЫКА",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_MULTIMUZYKA.m3u8"
+    },
+    {
+        "category": "ДЕТСКИЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "О!",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_O.m3u8"
+    },
+    {
+        "category": "ДЕТСКИЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Nicktoons HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_NICKTOONSHD.m3u8"
+    },
+    {
+        "category": "ДЕТСКИЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Уникум",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_UNIKUM.m3u8"
+    },
+    {
+        "category": "ДЕТСКИЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Tiji",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_TIJI.m3u8"
+    },
+    {
+        "category": "ДЕТСКИЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Детский мир",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_DETSKIY_MIR.m3u8"
+    },
+    {
+        "category": "ДЕТСКИЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Da Vinci",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_DAVINCI.m3u8"
+    },
+    {
+        "category": "ДЕТСКИЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "CARTOONITO HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_CARTOONITOHD.m3u8"
+    },
+    {
+        "category": "ДЕТСКИЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Радость моя",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_RADOSTMOYA.m3u8"
+    },
+    {
+        "category": "ДЕТСКИЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Nickelodeon HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_NICKELODEONHD.m3u8"
+    },
+    {
+        "category": "ДЕТСКИЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Солнце",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_SOLNCE.m3u8"
+    },
+    {
+        "category": "ДЕТСКИЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "МУЛЬТ HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_MULTHD.m3u8"
+    },
+    {
+        "category": "ДЕТСКИЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "МУЛЬТ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_MULT.m3u8"
+    },
+    {
+        "category": "ДЕТСКИЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Ani",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_ANI.m3u8"
+    },
+    {
+        "category": "ДЕТСКИЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Cartoon Network",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_CARTOONNETWORK.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "CGTN ESPANOL HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_CGTN_ESPANOLHD.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Большая Азия HD720",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_BAZIYAHD720.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "DW ESPANOL",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_DW_ESPANOL.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Известия",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_IZVESTIYA.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "DW ESPANOL HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_DW_ESPANOLHD.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "CGTN ENGLISH HD720",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_CGTN_ENGLISHHD720.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "DW ARABIC HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_DW_ARABICHD.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "RT HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_RTHD.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "CGTN ARABIC HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_CGTN_ARABICHD.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "CGTN РУССКИЙ HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_CGTN_RUSSKIYHD.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "CGTN DOCUMENTARY HD720",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_CGTN_DOCUMENTARYHD720.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "МИР 24",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_MIR24.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "МИР 24 HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_MIR24HD.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "РБК",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_RBK.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "РЖД ТВ HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_RZHDTVHD.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ЛДПР ТВ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_LDPRTV.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "DW ARABIC",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_DW_ARABIC.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ВМЕСТЕ РФ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_VMESTERF.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Большая Азия",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_BAZIYA.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "РЖД ТВ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_RZHDTV.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "CNN HD (English)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_CNNHD.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "РБК HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_RBKHD.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Красная линия",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_REDLINE.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "1-вый Национальный канал HD720",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_1RNKHD720.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ВМЕСТЕ РФ HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_VMESTERFHD.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "RTД HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_RTDHD.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Соловьев Live HD (auto)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://player.smotrim.ru/iframe/stream/live_id/63338?43e=5.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "TV BRICS HD [RUS]",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_TVBRICSHD_RUS.m3u8"
+    },
+    {
+        "category": "ИНФОРМАЦИОННЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "CGTN FRANCAIS HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_CGTN_FRANCAISHD.m3u8"
+    },
+    {
+        "category": "КАНАЛЫ О МОДЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Fashion TV (SK)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_FASHIONTV_SK.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ТЕЛЕКАФЕ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_TELEKAFE.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "КИНО ТВ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_KINOTV.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "TV1000",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_TV1000.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "ВРЕМЯ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_VREMYA.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "РЕТРО",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_RETRO.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Atv Bazmoc TV HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_ATVBAZMOCTVHD.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "КОШМАР",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_KOSHMAR.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Дом кино",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_DOMKINO.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "AMEDIA HIT HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_AMEDIAHITHD.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "НТВ ПРАВО",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_NTVPRAVO.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "TV1000 ACTION",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_TV1000ACTION.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "AMEDIA PREMIUM HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_AMEDIAPREMIUMHD.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "TV1000 РУССКОЕ КИНО",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_TV1000RUSSKOEKINO.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "AMEDIA II",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_AMEDIAII.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "НТВ СЕРИАЛ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_NTVSERIAL.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Иллюзион+",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_ILLUZIONPLUS.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "AMEDIA I",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_AMEDIAI.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Дом кино ПРЕМИУМ HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_DOMKINOPREMIUMHD.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "НТВ СТИЛЬ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_NTVSTIL.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Точка SCI-FI",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_SCI-FI.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "FOX Life",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_FOXLIFE.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "KINO 24",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_KINO24.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "FOX",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_FOX.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Кино и сериалы HD (СМОТРИМ)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/CH_KINO_I_SERIALYHD.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "CINEMA",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_CINEMA.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Кино 1 International",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_KINO1_INT.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Комедия",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_KOMEDIA.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Русский иллюзион",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_RUSSKIYILLUZION.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "НСТ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_NST.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Мосфильм. Золотая коллекция",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_MOSFILM_ZK.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ЕВРОКИНО",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_EVROKINO.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "НТВ ХИТ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_NTVHIT.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Русский бестселлер",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_RUSSKIY_BESTSELLER.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "КИНО ТВ HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_KINOTVHD.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Русский роман HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_RUSSKIY_ROMANHD.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Победа",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_POBEDA.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "СТС Love",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_STSLOVE.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Кино и сериалы (СМОТРИМ)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/CH_KINO_I_SERIALY.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "XXI",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_XXI.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "КИНОПОКАЗ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_KINOPOKAZ.m3u8"
+    },
+    {
+        "category": "КИНО И СЕРИАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Русский детектив",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_RUSSKIY_DETEKTIV.m3u8"
+    },
+    {
+        "category": "Каналы от Dmitry-tv",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "D-TV6",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmitry-tv.ddns.net:8666/his/CH_D-TV6"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Шансон ТВ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_SHANSONTV.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "OneBY [RUS]",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://rtmp.one.by:2200"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "ТНТ MUSIC",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_TNT_MUSIC.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "RUTV HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_RUTVHD.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "88 Stereo HD720",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_88STEREOHD720.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "TRACE Urban",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_TRACE_URBAN.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "MTV Live HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_MTVLIVEHD.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "OneBY",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_1MUZ.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "OCKO STAR",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_OCKOSTAR.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "BRIDGE TV РУССКИЙ ХИТ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_BRIDGETV_RUSSKIYHIT.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "OneBY HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://rtmp.one.by:1300"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "OCKO HITY",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_OCKOHITY.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "RUTV",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_RUTV.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Spirit TV HD720",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_SPIRITTVHD720.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "МУЗЫКА ПЕРВОГО",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_MUZYKAPERVOGO.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "RUSSIAN MUSIC BOX",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_RUSSIAN_MUSICBOX.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Spirit TV",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_SPIRITTV.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "V2BEAT HD720",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_V2BEATHD720.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Kronehit",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_KRONEHIT.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Kronehit HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_KRONEHITHD.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "TRACE Urban HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_TRACE_URBANHD.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Муз Союз",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_MUZSOYUZ.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "О!2",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_O2TV.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "VOSTOK TV",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_VOSTOKTV.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "BRIDGE TV HITS",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_BRIDGETV_HITS.m3u8"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "OneBY HD [RUS]",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://rtmp.one.by:2300"
+    },
+    {
+        "category": "МУЗЫКАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "ТНТ MUSIC HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_TNT_MUSICHD.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Загородный",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_ZAGORODNY.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Моя планета HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_MOYAPLANETAHD.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "TLC",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_TLC.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ДИКАЯ ОХОТА HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_DIKAYAOHOTAHD.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Первый космический HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_1KOSMICHESKIYHD.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Ратник HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_RATNIKHD.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Ратник",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_RATNIK.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "СОЮЗ HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_SOYUZHD.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Точка отрыва",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_TOCHKA_OTRYVA.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Точка ТВ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_TOCHKATV.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "АРСЕНАЛ HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_ARSENALHD.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "ДОМАШНИЕ ЖИВОТНЫЕ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_DOMASHNIEZHIVOTNYE.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ВОПРОСЫ ОТВЕТЫ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_VOPROSYOTVETY.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "УСАДЬБА",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_USADBA.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ПСИХОЛОГИЯ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_PSIHOLOGIYA.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ЗДОРОВОЕ ТВ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_ZDOROVOETV.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "VIASAT HISTORY",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_VIASATHISTORY.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "БОБЁР",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_BOBER.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "НЕИЗВЕСТНАЯ РОССИЯ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_UNKNOWN_RUSSIA.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ZooПАРК",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_3OOPARK.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "ПОЕХАЛИ!",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_POEHALI.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Живая природа HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_ZHIVAYAPRIRODAHD.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Живая планета",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_ZHIVAYAPLANETA.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ПРОДВИЖЕНИЕ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_PRODVIZHENIE.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Загородная жизнь",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_ZAGORODNAYAZHIZN.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "RTG tv",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_RTGTV.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "ID HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_IDHD.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Discovery Channel HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_DISCOVERYCHANNELHD.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Т24",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_T24.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Animal Planet HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_ANIMALPLANETHD.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Galaxy TV",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_GALAXYTV.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "National Geographic WILD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_NATIONALGEOGRAPHICWILD.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Охота и рыбалка",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_OHOTAIRYBALKA.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "National Geographic",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_NATIONALGEOGRAPHIC.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Доктор",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_DOKTOR.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "VIASAT EXPLORE",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_VIASATEXPLORE.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "НАУКА 2.0",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_NAUKA20.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Моя планета",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_MOYAPLANETA.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "НЕИЗВЕСТНАЯ РОССИЯ HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_UNKNOWN_RUSSIAHD.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "VIASAT NATURE",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_VIASATNATURE.m3u8"
+    },
+    {
+        "category": "ПОЗНАВАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ИСТОРИЯ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_ISTORIYA.m3u8"
+    },
+    {
+        "category": "РАДИО КАНАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "[Радио] Говорит Москва (Москва)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_GM_MOS.m3u8"
+    },
+    {
+        "category": "РАДИО КАНАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "[Радио] Радио России HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://player.smotrim.ru/iframe/stream/live_id/64807?43e=5.m3u8"
+    },
+    {
+        "category": "РАДИО КАНАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "[Радио] Радио Маяк HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://player.smotrim.ru/iframe/stream/live_id/62871?43e=5.m3u8"
+    },
+    {
+        "category": "РАДИО КАНАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "[Радио] Говорит Москва HD720 (Москва)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_GMHD720_MOS.m3u8"
+    },
+    {
+        "category": "РАДИО КАНАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "[Радио] ВЕСТИ FM HD (auto)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://player.smotrim.ru/iframe/stream/live_id/52035?43e=5.m3u8"
+    },
+    {
+        "category": "РАДИО КАНАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "[Радио] M-1 HD720",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_M1HD720.m3u8"
+    },
+    {
+        "category": "РАДИО КАНАЛЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "[Радио] РАДИО ХИТ HD720 (Орск)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_RADIOXITHD720_ORSK.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Перец International",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_PERETZ_INT.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "360°",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_360TV.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "LIFE TV [RUS/EST]",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_LIFETV_RUSEST.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "LIFE TV [RUS]",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_LIFETV_RUS.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Суббота!",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_SUBBOTA.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "7tv",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_7TV.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "ТНТ4",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_TNT4.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "8 канал",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_8CHANNEL.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Ники ТВ HD720",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_NIKITVHD720.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "8 Канал (Европа)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_8CHANNEL_EUROPE.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Три Ангела HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_3ANGELAHD.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Твое ТВ HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_TVOETVHD.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Три Ангела",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_3ANGELA.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Тонус ТВ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_TONUSTV.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Сарафан",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_SARAFAN.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Надежда HD720",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_NADEZHDAHD720.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "2x2",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_2X2.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "360° HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_360TVHD.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Просвещение",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_PROSVESHENIE.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Театр",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_TEATR.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "E TV HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_ETVHD.m3u8"
+    },
+    {
+        "category": "РАЗВЛЕКАТЕЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "TVM Channel",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_TVMCHANNEL.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Югра HD (Тюмень)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/region/CH_UGRAHD_TUM.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ТВК 24 (Красноярск)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_TVK24_KRSK.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "МТВ HD720 (Волгоград)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_MTVHD720_VGRAD.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ШАЯН (Казань)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_SHAYAN_KZN.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Волга HD (Нижний Новгород)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_VOLGAHD_NN.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Волга (Нижний Новгород)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_VOLGA_NN.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "РГВК Дагестан (Махачкала)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_DAGESTAN_MAHACHK.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "ТАМЫР (Уфа)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_TAMYR_UFA.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Матур ТВ HD (Уфа)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_MATURTVHD_UFA.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ТВ ПОИСК (Клин)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_TVPOISK_KLIN.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ТВ ПОИСК HD720 (Клин)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_TVPOISKHD720_KLIN.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Новый век HD720 (Тамбов)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_NOVIY_VEKHD720_TAMB.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "МИТВ (Местное Илимское TV)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://193.33.233.109:9000/tv"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Липецкое время HD720 (Липецк)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_LVREMYAHD720_LIPETSK.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Саров 24 HD720 (Саров)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_SAROV24HD720_SAROV.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "С86 (Сургут)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_C86_SUR.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Волгоград 24 (Волгоград)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/region/CH_VOLGOGRAD24_VGRAD.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ТРК Канал-16 (Саров)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_K16_SAROV.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "360° HD720 (Сургут)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_360HD720_SUR.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Новый век (Тамбов)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_NOVIY_VEK_TAMB.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Север HD (Нарьян-Мар)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_SEVERHD_NAO.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Медиа 15 HD720 (Владикавказ)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_MEDIA15HD720_VKAZ.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Кавказ 24 (Ставрополь)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/region/CH_KAVKAZ24_STAVR.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Первый Крымский (Крым)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_1KRYMSKIY_KRYM.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Нижний Новгород 24 (Нижний Новгород)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/region/CH_NN24_NN.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "TVАист (Ликино-Дулево)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_TVAIST_LD.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "СТВ/Продвижение (Стрежевой)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_STV_SRVOY.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Север (Нарьян-Мар)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_SEVER_NAO.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Осетия Ирыстон HD (Владикавказ)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_IRISTONHD_VKAZ.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ШАЯН HD (Казань)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_SHAYANHD_KZN.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "С1 (Сургут)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_C1_SUR.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "КРЫМ 24 HD (Крым)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_KRYM24HD_KRYM.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Мособр ТВ HD720 (Москва)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_MOSOBRTVHD720_MOS.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Сургут 24 HD720 (Сургут)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_C24HD720_SUR.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ТНВ Планета (Казань)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_TNVPLANETA_KZN.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "СВОЁ ТВ HD (Ставрополь)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_SVOETVHD_STAVR.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Тува 24 (Кызыл)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_TUVA24_TUVA.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Эхо ТВ 24 (Новоуральск)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_ECHOTV24_NURLSK.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ДОН 24 HD (Ростов на Дону)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_DON24HD_RD.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Легендарный 24 HD (Крым)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_LEGENDARNY24HD_KRYM.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Москва Доверие (Москва)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://player.smotrim.ru/iframe/stream/live_id/61125?43e=5.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "РГВК Дагестан HD (Махачкала)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_DAGESTANHD_MAHACHK.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "БАЙКАЛ Универ ТВ HD (Иркутск)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_BAYKALUNIVERTVHD_IRK.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "9 Волна (Лермонтов)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_9VOLNA_STAVR_KRAI.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Экспресс HD (Пенза)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_EXPRESSHD_PENZA.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "ТВК 24 HD (Красноярск)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_TVK24HD_KRSK.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Миллет ТВ HD720 (Симферополь)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_MILLETHD720_SMRPL.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Волгоград 24 HD (Волгоград)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/region/CH_VOLGOGRAD24HD_VGRAD.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "СВОЁ ТВ (Ставрополь)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_SVOETV_STAVR.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ДОН 24 (Ростов на Дону)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_DON24_RD.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Москва 24 (Москва) (auto)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://player.smotrim.ru/iframe/stream/live_id/1661?43e=5.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Симферополь 24 HD (Крым)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_SIMFEROPOL24HD_KRYM.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "САЛЯМ (Уфа)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_SALYAM_UFA.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "НВК Саха HD (Якутск)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_NVCHD_DV_YKT.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "АИСТ HD (Иркутск)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_AISTHD_IRK.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Курай ТВ (Уфа)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_KURAY_UFA.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Народное телевидение Мордовии HD720 (Саранск)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_NTMHD720_SRNK.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "12 Канал HD (Омск)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_12CHANNELHD_OMSK.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Миллет ТВ (Симферополь)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_MILLET_SMRPL.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "РБК (Уфа)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_RBK_UFA.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "TV1.KG БИШКЕК CITY HD (Бишкек)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_BISHKEKCITYHD_BISHKEK.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ГТ-Регион (Ярославль)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_GTREG_YARL.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "SOCHI LIVE HD720 (Сочи)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_SOCHILIVEHD720_SOCHI.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Енисей HD (Красноярск)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_ENISEYHD_KRSK.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Первый Ростовский HD (Ростов на Дону)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_1ROSTOVSKIYHD_RD.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Ингушетия HD720 (Магас)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_INGUSHETIYAHD720_ING.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "UNIVER (Казань)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_UNIVER_KZN.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Москва 24 (Москва)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_MOSKVA24_MOS.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "12 Канал (Омск)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_12CHANNEL_OMSK.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Народное телевидение Мордовии (Саранск)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_NTM_SRNK.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Нижний Новгород 24 HD (Нижний Новгород)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/region/CH_NN24HD_NN.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Мир Белогорья HD (Белгород)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_MIR_BLGRYAHD_BELG.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "БСТ (Уфа)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_BST_UFA.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "НТС HD (Севастополь)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_NTSHD_SVTPL.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Краснодар (Краснодар)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_KRASNODAR_KRDAR.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Краснодар HD (Краснодар)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/region/CH_KRASNODARHD_KRDAR.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "НСК 49 канал (Новосибирск)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_NSK49CHANNEL_NSK.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Первый Ярославский HD (Ярославль)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_1YAROSLAVSKIYHD_YARL.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Первый Ростовский (Ростов на Дону)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_1ROSTOVSKIY_RD.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Ингушетия (Магас)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_INGUSHETIYA_ING.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Башкортостан 24 (Уфа)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/region/CH_BASHKORTOSTAN24_UFA.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Астрахань 24 HD (Астрахань)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_ASTRAKHAN24HD_ASTRH.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Сибирь 24 HD (Новосибирск)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/region/CH_SIBIR24HD_NSK.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Башкортостан 24 HD (Уфа)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/region/CH_BASHKORTOSTAN24HD_UFA.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Санкт-Петербург HD (Санкт-Петербург) (auto)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://player.smotrim.ru/iframe/stream/live_id/62037?43e=5.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Саратов 24 HD (Саратов)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_SARATOV24HD_SARATOV.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ЮУрГУ ТВ HD720 (Челябинск)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_YURGUTVHD720_CHEL.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ОТВ HD720 (Екатеринбург)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_OTVHD720_EKT.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Первый Ярославский (Ярославль)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_1YAROSLAVSKIY_YARL.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Запад 24 HD (Калининград)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/region/CH_3APAD24HD_KLGR.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Ветта-24 (Пермь)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_VETTA24_PERM.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Урал 24 (Челябинск)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/region/CH_URAL24_CHEL.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Урал 24 HD (Челябинск)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/region/CH_URAL24HD_CHEL.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Теледом HD720 (Санкт-Петербург)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_TELEDOMHD720_SPB.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Крик ТВ (Магадан)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_KRIKTV_DV_MGDN.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Волжский Плюс HD (Волжский)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_VOLPLUSHD_VLSKIY.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ОТВ (Екатеринбург)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_OTV_EKT.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Архыз 24 (Черкесия)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_ARKHIZ24_CHERKS.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Запад 24 (Калининград)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/region/CH_3APAD24_KLGR.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Якутия 24 HD (Якутск)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_YAKT24HD_DV_YKT.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Сибирь 24 (Новосибирск)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/region/CH_SIBIR24_NSK.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "UNIVER HD (Казань)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_UNIVERHD_KZN.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Архыз 24 HD (Черкесия)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_ARKHIZ24HD_CHERKS.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Наш дом (Пенза)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_NASHDOM_PENZA.m3u8"
+    },
+    {
+        "category": "РЕГИОНАЛЬНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Губерния (Самара)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/region/CH_GUBERNIA_SAMARA.m3u8"
+    },
+    {
+        "category": "СПОРТИВНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Viasat Sport",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_VIASATSPORT.m3u8"
+    },
+    {
+        "category": "СПОРТИВНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "EUROSPORT 1 HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_EUROSPORT1HD.m3u8"
+    },
+    {
+        "category": "СПОРТИВНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Red Bull TV HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_REDBULLTVHD.m3u8"
+    },
+    {
+        "category": "СПОРТИВНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "АВТО 24",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_AVTO24.m3u8"
+    },
+    {
+        "category": "СПОРТИВНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ФУТБОЛ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_FUTBOL.m3u8"
+    },
+    {
+        "category": "СПОРТИВНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "SD REX",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_SDREX.m3u8"
+    },
+    {
+        "category": "СПОРТИВНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ДРАЙВ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_DRIVE.m3u8"
+    },
+    {
+        "category": "СПОРТИВНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "FAST SPORTS HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_FASTSPORTSHD.m3u8"
+    },
+    {
+        "category": "СПОРТИВНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "FIGHTBOX HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_FIGHTBOXHD.m3u8"
+    },
+    {
+        "category": "СПОРТИВНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Red Bull TV",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_REDBULLTV.m3u8"
+    },
+    {
+        "category": "ТЕЛЕМАГАЗИНЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Витрина ТВ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_VITRINATV.m3u8"
+    },
+    {
+        "category": "ТЕЛЕМАГАЗИНЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "LEOMAX 24 HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_LEOMAX24HD.m3u8"
+    },
+    {
+        "category": "ТЕЛЕМАГАЗИНЫ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Shopping Live",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_SHOPPINGLIVE.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ТВЦ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_TVC.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Россия 1 (+4)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_RUSSIA1_4.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Первый канал HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_1TVHD.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ТНТ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_TNT.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Ю",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_U.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Пятница!",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_FRIDAY.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Россия 24 (+3)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/T2/CH_RUSSIA24_3.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "МИР",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_MIR.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ТВ3 (+4)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_TV3_4.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Россия 24 (+2)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/T2/CH_RUSSIA24_2.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Матч!",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_MATCHTV.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ОТР",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_OTR.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ТВ3",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_TV3.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Россия 1 (+8)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/T2/CH_RUSSIA1_8.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "МИР HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_MIRHD.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Россия 24",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_RUSSIA24.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Домашний (+4)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_DOMASHNIY_4.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Россия 1 (+7)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/T2/CH_RUSSIA1_7.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Карусель (+4)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_KARUSEL_4.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Домашний",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_DOMASHNIY.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Россия РТР HD720 (СНГ) (auto)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://player.smotrim.ru/iframe/stream/live_id/63253?43e=5.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "СТС (+4)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_STS_4.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Россия РТР HD720 (ASIA) (auto)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://player.smotrim.ru/iframe/stream/live_id/63254?43e=5.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ОТР (+4)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_OTR_4.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Россия 1 (+6)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/T2/CH_RUSSIA1_6.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Звезда (+4)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_ZVEZDA_4.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "МИР (+2)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_MIR_2.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Звезда HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_ZVEZDAHD.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "СТС HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_STSHD.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "ТНТ HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_TNTHD.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "PLANETA RTR HD720 (USA) (auto)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://player.smotrim.ru/iframe/stream/live_id/63250?43e=5.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "МИР (+4)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_MIR_4.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "МИР (+7)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_MIR_7.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Пятница! (+4)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_FRIDAY_4.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "СТС",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_STS.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Россия К HD (auto)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://player.smotrim.ru/iframe/stream/live_id/19201?43e=5.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Россия К HD (+7) (auto)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://player.smotrim.ru/iframe/stream/live_id/60883?43e=5.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "ТВЦ (+4)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_TVC_4.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Россия 1 (+2)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/T2/CH_RUSSIA1_2.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "НТВ (+7)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_NTV_7.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Россия К",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_RUSSIAK.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Россия К HD (+4) (auto)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://player.smotrim.ru/iframe/stream/live_id/60882?43e=5.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Пятница! International",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_FRIDAY_INT.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "НТВ (+4)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_NTV_4.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Россия 24 (+6)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/smotrim/T2/CH_RUSSIA24_6.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "МУЗ ТВ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_MUZTV.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "РЕН ТВ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_RENTV.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Че!",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/CH_CHE.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "РЕН ТВ (+4)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_RENTV_4.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Пятый канал (+4)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_5TV_4.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "РЕН ТВ International",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_RENTV_INT.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Россия К (+4)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_RUSSIAK_4.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Россия 1",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_RUSSIA1.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "НТВ (+2)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_NTV_2.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Карусель",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://player.smotrim.ru/iframe/stream/live_id/61126?43e=5.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Первый канал (+4)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_1TV_4.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Пятый канал",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_5TV.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "НТВ HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_NTVHD.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "НТВ",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_NTV.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "НТВ МИР",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_NTV_MIR.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "Матч! HD",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_MATCHTVHD.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "СПАС",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_SPAS.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Звезда",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_ZVEZDA.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Россия 24 Int",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://player.smotrim.ru/iframe/stream/live_id/64739?43e=5.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Россия К HD (+2) (auto)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://player.smotrim.ru/iframe/stream/live_id/60881?43e=5.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "СПАС (+2)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_SPAS_2.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "GOOD",
+        "title": "Первый канал",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_1TV.m3u8"
+    },
+    {
+        "category": "ЭФИРНЫЕ",
+        "country": {
+            "code": null,
+            "name": null
+        },
+        "language": null,
+        "logo": null,
+        "status": "BAD",
+        "title": "МУЗ ТВ (+4)",
+        "tvg": {
+            "id": null,
+            "name": null,
+            "url": null
+        },
+        "url": "http://dmi3y-tv.ru/hls/T2/CH_MUZTV_4.m3u8"
+    }
+]
