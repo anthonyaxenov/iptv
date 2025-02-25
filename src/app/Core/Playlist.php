@@ -95,6 +95,9 @@ class Playlist
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HEADER => false,
             CURLOPT_FAILONERROR => true,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_MAXREDIRS => 5,
+            CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36',
         ]);
 
         $content = curl_exec($curl);
