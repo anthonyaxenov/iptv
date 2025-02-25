@@ -1,6 +1,6 @@
 {
     "require": {
-        "php": "^8.2",
+        "php": "^8.3",
         "ext-json": "*",
         "ext-curl": "*",
         "ext-fileinfo": "*",
