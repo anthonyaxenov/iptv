@@ -25,7 +25,7 @@
                 <td class="text-center font-monospace id">{{ id }}</td>
                 <td class="info">
                     <span class="badge small bg-secondary text-dark status">loading</span>
-                    <strong>{{ playlist.name }}</strong>
+                    <a href="{{ base_url(id ~ '/details') }}" class="text-light fw-bold text-decoration-none">{{ playlist.name }}</a>
                     <div class="small mt-2">
                         {% if playlist.desc|length > 0 %}
                             <p class="my-1 d-none d-lg-block">{{ playlist.desc }}</p>
