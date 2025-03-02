@@ -1,12 +1,25 @@
 {
+    "name": "axenov/iptv",
+    "type": "project",
+    "description": "Сервис для сбора IPTV-плейлистов и сокращения ссылок",
+    "authors": [
+        {
+            "name": "Anthony Axenov",
+            "homepage": "https://axenov.dev/",
+            "role": "author"
+        }
+    ],
+    "license": "MIT",
     "require": {
         "php": "^8.3",
         "ext-json": "*",
         "ext-curl": "*",
+        "ext-redis": "*",
         "ext-fileinfo": "*",
         "mikecao/flight": "^3.12",
         "symfony/dotenv": "^7.1",
         "twig/twig": "^3.14"
+        "ext-redis": "*",
     },
     "autoload": {
         "psr-4": {

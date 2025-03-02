@@ -4,6 +4,22 @@ networks:
 
 services:
 
+  keydb:
+    container_name: iptv-keydb
+    image: eqalpha/keydb:latest
+    restart: unless-stopped
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./docker/keydb/keydb.conf:/etc/keydb/keydb.conf
+      - ./docker/keydb/data/:/data:rw
+      - ./log/keydb:/var/log/keydb/:rw
+    env_file:
+      - .env
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    networks:
+      - iptv
+
   php:
     container_name: iptv-php
     env_file:
@@ -14,7 +30,7 @@ services:
       dockerfile: docker/php/${IPTV_ENV}.dockerfile
     restart: unless-stopped
     extra_hosts:
-      - "host.docker.internal:host-gateway"
+      - host.docker.internal:host-gateway
     networks:
       - iptv
     volumes:
@@ -24,13 +40,15 @@ services:
       - ./log/php:/var/log/php:rw
       - ./src:/var/www:rw
       - ./playlists.ini:/var/www/config/playlists.ini:ro
+    depends_on:
+      - keydb
 
   nginx:
     container_name: iptv-nginx
     image: nginx:latest
     restart: unless-stopped
     extra_hosts:
-      - "host.docker.internal:host-gateway"
+      - host.docker.internal:host-gateway
     networks:
       - iptv
     volumes:
