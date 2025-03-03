@@ -13,9 +13,8 @@
     <table class="table table-responsive table-dark table-hover small">
         <thead>
         <tr>
-            <th>ID</th>
+            <th class="text-center">ID</th>
             <th>Информация о плейлисте</th>
-            <th>Каналов</th>
             <th class="d-none d-sm-table-cell">Ссылка для ТВ</th>
         </tr>
         </thead>
@@ -24,18 +23,12 @@
             <tr class="pls" data-playlist-id="{{ id }}">
                 <td class="text-center font-monospace id">{{ id }}</td>
                 <td class="info">
-                    <span class="badge small bg-secondary text-dark status">loading</span>
                     <a href="{{ base_url(id ~ '/details') }}" class="text-light fw-bold text-decoration-none">{{ playlist.name }}</a>
                     <div class="small mt-2">
                         {% if playlist.desc|length > 0 %}
                             <p class="my-1 d-none d-lg-block">{{ playlist.desc }}</p>
                         {% endif %}
                         <a href="{{ base_url(id ~ '/details') }}" class="text-light">Подробнее...</a>
-                    </div>
-                </td>
-                <td class="text-center count">
-                    <div class="spinner-border text-success" role="status">
-                        <span class="visually-hidden">загрузка...</span>
                     </div>
                 </td>
                 <td class="col-3 d-none d-sm-table-cell">
@@ -70,51 +63,4 @@
 {% endblock %}
 
 {% block footer %}
-    <script>
-        document.querySelectorAll('tr.pls').forEach((tr) => {
-            const id = tr.attributes['data-playlist-id'].value
-            const xhr = new XMLHttpRequest()
-            xhr.responseType = 'json'
-            xhr.timeout = 60000 // ms = 1 min
-            let el_status = tr.querySelector('span.status')
-            let el_count = tr.querySelector('td.count')
-            xhr.onreadystatechange = () => {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    el_status.classList.remove('bg-secondary')
-                    el_status.innerText = xhr.response?.status.possibleStatus ?? 'error'
-                    el_count.innerText = xhr.response?.content.channelCount ?? 0
-                    switch (el_status.innerText) {
-                        case 'online':
-                            el_status.classList.add('bg-success')
-                            break
-                        case 'timeout':
-                            el_status.classList.add('bg-warning')
-                            break
-                        default:
-                            el_status.classList.add('bg-danger')
-                            break
-                    }
-                    if (xhr.response?.error) {
-                        el_status.title = '[' + xhr.response.error.code + '] ' + xhr.response.error.message
-                    }
-                }
-            }
-            xhr.onerror = () => {
-                el_status.classList.add('bg-danger')
-                el_status.innerText = 'error'
-                el_count.innerText = 0
-            }
-            xhr.onabort = () => {
-                el_status.classList.add('bg-secondary')
-                el_count.innerText = 0
-            }
-            xhr.ontimeout = () => {
-                el_status.classList.add('bg-secondary')
-                el_status.innerText = 'timeout'
-                el_count.innerText = 0
-            }
-            xhr.open('GET', '/' + id + '/json')
-            xhr.send()
-        })
-    </script>
 {% endblock %}
