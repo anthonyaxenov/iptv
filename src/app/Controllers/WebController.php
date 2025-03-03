@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Controllers;
 
 use App\Core\ChannelLogo;
+use App\Errors\PlaylistNotFoundException;
 use Exception;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -67,9 +68,14 @@ class WebController extends BasicController
      */
     public function redirect(ServerRequestInterface $request, ResponseInterface $response): ResponseInterface
     {
+        ini()->load();
         $code = $request->getAttributes()['code'];
-        $playlist = $this->getPlaylist($code);
-        return $response->withHeader('Location', $playlist->pls);
+        try {
+            $playlist = ini()->getPlaylist($code);
+            return $response->withHeader('Location', $playlist->pls);
+        } catch (PlaylistNotFoundException) {
+            return $this->notFound($request, $response);
+        }
     }
 
     /**
@@ -83,8 +89,15 @@ class WebController extends BasicController
      */
     public function details(ServerRequestInterface $request, ResponseInterface $response): ResponseInterface
     {
+        ini()->load();
         $code = $request->getAttributes()['code'];
-        $playlist = $this->getPlaylist($code);
+        try {
+            $playlist = ini()->getPlaylist($code);
+            $response->withHeader('Location', $playlist->pls);
+        } catch (PlaylistNotFoundException) {
+            return $this->notFound($request, $response);
+        }
+
         $playlist->fetchContent();
         $playlist->parse();
 

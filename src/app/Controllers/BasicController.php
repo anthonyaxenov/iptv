@@ -55,30 +55,4 @@ class BasicController
         $view = Twig::fromRequest($request);
         return $view->render($response, $template, $data);
     }
-
-    /**
-     * Возвращает плейлист по его ID для обработки
-     *
-     * @param string $id
-     * @param bool $asJson
-     * @return Playlist
-     * @throws Exception
-     */
-    protected function getPlaylist(string $id, bool $asJson = false): Playlist
-    {
-        ini()->load();
-
-        if (ini()->getRedirection($id)) {
-            $redirectTo = base_url(ini()->getRedirection($id) . ($asJson ? '/json' : '/details'));
-            Flight::redirect($redirectTo);
-            die;
-        }
-
-        try {
-            return ini()->getPlaylist($id);
-        } catch (PlaylistNotFoundException) {
-            $this->notFound($id, $asJson);
-            die;
-        }
-    }
 }
