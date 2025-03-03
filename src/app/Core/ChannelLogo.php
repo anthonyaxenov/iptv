@@ -41,7 +41,7 @@ class ChannelLogo implements \Stringable
      */
     public function __construct(string $url)
     {
-        $url = $this->prepareUrl($url);
+        $url = empty($url) ? base_url('public/no-tvg-logo.png') : $this->prepareUrl($url);
         if (is_string($url)) {
             $this->url = $url;
             $this->hash = md5($url);
@@ -57,17 +57,15 @@ class ChannelLogo implements \Stringable
      */
     protected function prepareUrl(string $url): false|string
     {
-        $url = filter_var(trim($url), FILTER_VALIDATE_URL);
-        if ($url === false) {
+        $parts = parse_url(trim($url));
+        if (!is_array($parts) || count($parts) < 2) {
             return false;
         }
 
-        $parts = parse_url($url);
-        if (!is_array($parts)) {
-            return false;
-        }
+        $result = $parts['scheme'] . '://' . $parts['host'];
+        $result .= (empty($parts['port']) ? '' : ':' . $parts['port']);
 
-        return $parts['scheme'] . '://' . $parts['host'] . $parts['path'];
+        return $result . $parts['path'];
     }
 
     /**
@@ -122,7 +120,7 @@ class ChannelLogo implements \Stringable
     public function setDefault(): bool
     {
         $this->path = root_path('public/no-tvg-logo.png');
-        return$this->readFile();
+        return $this->readFile();
     }
 
     /**

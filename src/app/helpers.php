@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-use flight\Engine;
-use flight\net\Response;
-use Illuminate\Support\Arr;
+use App\Core\Core;
+use App\Core\IniFile;
+use Slim\App;
 
 /**
  * Returns path to root application directory
@@ -58,7 +58,7 @@ function views_path(string $path = ''): string
  */
 function base_url(string $route = ''): string
 {
-    return rtrim(sprintf('%s/%s', config('flight.base_url'), $route), '/');
+    return rtrim(sprintf('%s/%s', env('APP_URL'), $route), '/');
 }
 
 /**
@@ -70,7 +70,7 @@ function base_url(string $route = ''): string
  */
 function env(string $key, mixed $default = null): mixed
 {
-    return $_ENV[$key] ?? $default;
+    return $_ENV[$key] ?? $_SERVER[$key] ?? $default;
 }
 
 /**
@@ -89,23 +89,23 @@ function view(mixed $template, array $data = []): void
 }
 
 /**
- * Returns response object
+ * Returns core object
  *
- * @return Response
+ * @return Core
  */
-function response(): Response
+function core(): Core
 {
-    return Flight::response();
+    return Core::get();
 }
 
 /**
  * Returns app object
  *
- * @return Engine
+ * @return App
  */
-function app(): Engine
+function app(): App
 {
-    return Flight::app();
+    return Core::get()->app();
 }
 
 /**
@@ -135,5 +135,25 @@ function bool(mixed $value): bool
  */
 function config(string $key, mixed $default = null): mixed
 {
-    return Flight::get('config')[$key] ?? $default;
+    return Core::get()->config($key, $default);
+}
+
+/**
+ * Get Redis instance
+ *
+ * @return Redis
+ */
+function redis(): Redis
+{
+    return Core::get()->redis();
+}
+
+/**
+ * Get ini-file instance
+ *
+ * @return IniFile
+ */
+function ini(): IniFile
+{
+    return Core::get()->ini();
 }

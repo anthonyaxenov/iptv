@@ -40,6 +40,7 @@ services:
       - ./log/php:/var/log/php:rw
       - ./src:/var/www:rw
       - ./playlists.ini:/var/www/config/playlists.ini:ro
+      - ./.git/refs/heads/master:/var/www/commit:ro
     depends_on:
       - keydb
 

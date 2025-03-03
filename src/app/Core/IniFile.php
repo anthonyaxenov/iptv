@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Core;
 
-use App\Exceptions\PlaylistNotFoundException;
+use App\Errors\PlaylistNotFoundException;
 use Exception;
 
 /**
@@ -15,7 +15,7 @@ class IniFile
     /**
      * @var array Считанное из файла содержимое ini-файла
      */
-    protected array $rawIni;
+    protected array $ini;
 
     /**
      * @var Playlist[] Коллекция подгруженных плейлистов
@@ -40,13 +40,30 @@ class IniFile
      */
     public function load(): void
     {
-        $filepath = config_path('playlists.ini');
-        $this->updated_at = date('d.m.Y h:i', filemtime($filepath));
-
-        $this->rawIni = parse_ini_file($filepath, true);
-        foreach ($this->rawIni as $id => $data) {
-            $this->playlists[(string)$id] = $this->makePlaylist($id, $data);
+        $ini = redis()->hGetAll('_playlists_');
+        if (empty($ini)) {
+            $filepath = config_path('playlists.ini');
+            $ini = parse_ini_file($filepath, true);
+            $this->updated_at = date('d.m.Y h:i', filemtime($filepath));
+            $order = array_keys($ini);
         }
+
+        $order ??= redis()->get('_order_');
+        $this->ini ??= $ini;
+        $this->updated_at ??= redis()->get('_updated_at_');
+        $transaction = redis()->multi();
+        foreach ($order as $id) {
+            $data = $this->ini[$id];
+            $this->playlists[(string)$id] = $pls = $this->makePlaylist($id, $data);
+            $transaction->hSet('_playlists_', $id, $pls);
+        }
+
+        $expireAfter = config('redis.ttl_days');
+        $transaction
+            ->expire('_playlists_', $expireAfter)
+            ->set('_order_', $order, ['EX' => $expireAfter])
+            ->set('_updated_at_', $this->updated_at, ['EX' => $expireAfter])
+            ->exec();
     }
 
     /**
@@ -57,11 +74,9 @@ class IniFile
      */
     public function playlists(bool $all = true): array
     {
-        if ($all) {
-            return $this->playlists;
-        }
-
-        return array_filter($this->playlists, static fn ($playlist) => is_null($playlist->redirectId));
+        return $all
+            ? $this->playlists
+            : array_filter($this->playlists, static fn ($playlist) => is_null($playlist->redirectId));
     }
 
     /**
@@ -111,7 +126,7 @@ class IniFile
         $id = (string)$id;
         if (isset($params['redirect'])) {
             $this->redirections[$id] = $redirectId = (string)$params['redirect'];
-            $params = $this->rawIni[$redirectId];
+            $params = $this->ini[$redirectId];
             return $this->makePlaylist($id, $params, $redirectId);
         }
 

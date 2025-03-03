@@ -4,7 +4,9 @@ downloaded/
 /src/commit
 /src/cache/*
 /src/vendor
+/src/config/playlists.ini
 /src/views/custom.twig
+/tmp
 *.log
 .env
 *.m3u

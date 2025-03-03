@@ -49,11 +49,11 @@
         {% endfor %}
         </tbody>
     </table>
-    {% if pages.count > 0 %}
+    {% if pageCount > 0 %}
     <div aria-label="pages">
         <ul class="pagination justify-content-center">
-            {% for page in range(1, pages.count) %}
-                {% if page == pages.current %}
+            {% for page in range(1, pageCount) %}
+                {% if page == pageCurrent %}
                     <li class="page-item active" aria-current="page">
                         <span class="page-link">{{ page }}</span>
                     </li>

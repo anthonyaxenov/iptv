@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Core;
 
+use CurlHandle;
 use Exception;
 use Random\RandomException;
 
@@ -86,20 +87,19 @@ class Playlist
      *
      * @return void
      */
-    public function download(): void
+    public function fetchContent(): void
     {
-        $curl = curl_init();
-        curl_setopt_array($curl, [
-            CURLOPT_URL => $this->pls,
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_TIMEOUT => 30,
-            CURLOPT_HEADER => false,
-            CURLOPT_FAILONERROR => true,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_MAXREDIRS => 5,
-            CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36',
-        ]);
+        $cached = redis()->get($this->id);
+        if (is_array($cached)) {
+            $this->downloadStatus['httpCode'] = $cached['httpCode'];
+            $this->downloadStatus['errCode'] = $cached['errCode'];
+            $this->downloadStatus['errText'] = $cached['errText'];
+            $this->downloadStatus['possibleStatus'] = $cached['possibleStatus'];
+            $this->rawContent = $cached['content'];
+            return;
+        }
 
+        $curl = $this->makeCurl();
         $content = curl_exec($curl);
         $this->rawContent = $content === false ? null : $content;
         $this->downloadStatus['httpCode'] = curl_getinfo($curl, CURLINFO_RESPONSE_CODE);
@@ -107,6 +107,16 @@ class Playlist
         $this->downloadStatus['errText'] = curl_error($curl);
         $this->downloadStatus['possibleStatus'] = $this->guessStatus($this->downloadStatus['errCode']);
         curl_close($curl);
+
+        if ($cached === false) {
+            redis()->set($this->id, [
+                'httpCode' => $this->downloadStatus['httpCode'],
+                'errCode' => $this->downloadStatus['errCode'],
+                'errText' => $this->downloadStatus['errText'],
+                'possibleStatus' => $this->downloadStatus['possibleStatus'],
+                'content' => $this->rawContent,
+            ], ['EX' => config('redis.ttl_days')]);
+        }
     }
 
     /**
@@ -239,6 +249,53 @@ class Playlist
         $result['groups'] = array_values($groups);
 
         return $this->parsedContent = $result;
+    }
+
+    public function check(): bool
+    {
+        $curl = $this->makeCurl([
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_NOBODY => true,
+            CURLOPT_HEADER => true,
+            CURLOPT_CUSTOMREQUEST => 'HEAD',
+        ]);
+
+        $content = curl_exec($curl);
+        $this->rawContent = $content === false ? null : $content;
+        $this->downloadStatus['httpCode'] = curl_getinfo($curl, CURLINFO_RESPONSE_CODE);
+        $this->downloadStatus['errCode'] = curl_errno($curl);
+        $this->downloadStatus['errText'] = curl_error($curl);
+        $this->downloadStatus['possibleStatus'] = $this->guessStatus($this->downloadStatus['errCode']);
+        curl_close($curl);
+
+        return $this->downloadStatus['httpCode'] < 400;
+    }
+
+    protected function makeCurl(array $customOptions = []): CurlHandle
+    {
+        $options = [
+            CURLOPT_URL => $this->pls,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HEADER => false,
+            CURLOPT_FAILONERROR => true,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_MAXREDIRS => 5,
+            CURLOPT_USERAGENT => config('app.user_agent'),
+        ];
+
+        $curl = curl_init();
+
+        foreach ($options as $option => $value) {
+            curl_setopt($curl, $option, $value);
+        }
+
+        // array_merge($options, $customOptions) loses keys
+        foreach ($customOptions as $option => $value) {
+            curl_setopt($curl, $option, $value);
+        }
+
+        return $curl;
     }
 
     /**

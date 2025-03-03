@@ -16,10 +16,11 @@
         "ext-curl": "*",
         "ext-redis": "*",
         "ext-fileinfo": "*",
-        "mikecao/flight": "^3.12",
-        "symfony/dotenv": "^7.1",
-        "twig/twig": "^3.14"
-        "ext-redis": "*",
+        "guzzlehttp/guzzle": "^7.8",
+        "nyholm/psr7": "^1.6",
+        "vlucas/phpdotenv": "*",
+        "slim/slim": "^4.11",
+        "slim/twig-view": "^3.4"
     },
     "autoload": {
         "psr-4": {
@@ -37,6 +38,9 @@
     },
     "config": {
         "optimize-autoloader": true,
+        "preferred-install": "dist",
         "sort-packages": true
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\Extensions;
+namespace App\Core;
 
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
-class TwigFunctions extends AbstractExtension
+class TwigExtention extends AbstractExtension
 {
     public function getFunctions(): array
     {
